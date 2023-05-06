@@ -8,11 +8,4 @@ public class ReusableMethods {
         return js;
     }
 
-    public static String key(){
-        return "qaclick123";
-    }
-    public static String headerOption(){
-        return "application/json";
-    }
-
 }

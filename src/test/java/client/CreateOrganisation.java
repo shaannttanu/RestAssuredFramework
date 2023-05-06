@@ -16,14 +16,14 @@ public class CreateOrganisation {
     @Test
     public static void createNewOrganisation(){
 
-        RestAssured.baseURI=Base.getBaseUri();
+        RestAssured.baseURI= GetConfigProperties.getBaseUri();
 
         //setting organisation name using FAKER :
         Faker faker=new Faker();
         organisationName = faker.company().name()+ " Testing Company";
 
         String createOrganisationResponse=given().header("Content-Type","application/json")
-                .header("X-OFB-TOKEN",Base.getSuperAdminToken())
+                .header("X-OFB-TOKEN", GetConfigProperties.getSuperAdminToken())
                 .header("X-OFB-PLATFORM","WEB_SITE")
                 .header("X-REFERRER-DOMAIN","BUYER")
                 .body(OrganisationPayloads.createOrganisationPayload(CreateAccount.randomMobile,faker.name().fullName(),organisationName))

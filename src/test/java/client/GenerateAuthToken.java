@@ -13,7 +13,7 @@ public class GenerateAuthToken {
     @Test
     public static void generateAuthToken(String tokenType){
 
-        RestAssured.baseURI=Base.getBaseUri();
+        RestAssured.baseURI= GetConfigProperties.getBaseUri();
         String adminAuthTokenResponse;
 
         if(tokenType.equalsIgnoreCase("adminAuthToken")){

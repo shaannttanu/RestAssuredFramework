@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.*;
 public class CreateAccount {
 
     public static String otp;
-    public static String randomMobile=Base.getRandomMobile();
+    public static String randomMobile= GetConfigProperties.getRandomMobile();
     public static String panNumber;
     public static String gstNumber;
     public static String buyerAccountId;
@@ -20,7 +20,7 @@ public class CreateAccount {
     @Test
     public static void CreateAutomationAccount(String accountType){
 
-        RestAssured.baseURI= Base.getBaseUri();
+        RestAssured.baseURI= GetConfigProperties.getBaseUri();
         String createAutomationAccountResponse;
 
         //CreateAutomationAccount :
@@ -53,7 +53,7 @@ public class CreateAccount {
     @Test
     public static void Login(){
 
-        RestAssured.baseURI = Base.getBaseUri();
+        RestAssured.baseURI = GetConfigProperties.getBaseUri();
         //Send LoginOTP api :
         String sendLoginOtpResponse=given().header("Content-Type","application/json")
                 .body(AccountCreatePayloads.sendLoginOtpPayload(randomMobile))
@@ -69,7 +69,7 @@ public class CreateAccount {
 
         String getOtpResponse = given()
                 .queryParam("mobile",randomMobile)
-                .queryParam("key",Base.getRediskey())
+                .queryParam("key", GetConfigProperties.getRediskey())
                 .when().get("api/v1/internal/otp")
                 .then().assertThat().statusCode(200).extract().response().asString();
 
@@ -84,7 +84,7 @@ public class CreateAccount {
     @Test
     public static void createNewAccount(){
 
-        RestAssured.baseURI = Base.getBaseUri();
+        RestAssured.baseURI = GetConfigProperties.getBaseUri();
         String createNewAccountResponse=given().header("Content-Type","application/json")
                 .body(AccountCreatePayloads.accountCreatePayload(randomMobile,otp))
                 .when().post("api/v1/account/create")

@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class Base {
+public class GetConfigProperties {
     public static Properties prop;
     public static void getConfigProperties(){
         prop = new Properties();

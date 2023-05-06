@@ -7,11 +7,11 @@ import static io.restassured.RestAssured.*;
 public class TokenAuth {
     @Test
     public static void tokenAuth(){
-        RestAssured.baseURI= Base.getBaseUri();
+        RestAssured.baseURI= GetConfigProperties.getBaseUri();
 
         given()
-                .queryParam("key",Base.getRediskey())
-                .when().post(String.format("api/v1/internal/testLogin/%s",Base.getSuperAdminToken()))
+                .queryParam("key", GetConfigProperties.getRediskey())
+                .when().post(String.format("api/v1/internal/testLogin/%s", GetConfigProperties.getSuperAdminToken()))
                 .then().assertThat().statusCode(200);
     }
 }
