@@ -1,4 +1,6 @@
 package files;
+import com.github.javafaker.Faker;
+
 import java.lang.*;
 
 
@@ -22,5 +24,11 @@ public class UtilityFunctions {
 
         String gstNumber = "06"+panNumber+"1ZC";
         return gstNumber;
+    }
+
+    public static String getRandomName(){
+        Faker faker = new Faker();
+        String randomName = faker.name().fullName();
+        return randomName;
     }
 }

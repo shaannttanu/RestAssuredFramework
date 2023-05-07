@@ -6,12 +6,12 @@ import static io.restassured.RestAssured.*;
 
 public class TokenAuth {
     @Test
-    public static void tokenAuth(){
-        RestAssured.baseURI= GetConfigProperties.getBaseUri();
+    public static void tokenAuth(String token){
+        RestAssured.baseURI= GetConfigProperties.getStgAPI();
 
         given()
                 .queryParam("key", GetConfigProperties.getRediskey())
-                .when().post(String.format("api/v1/internal/testLogin/%s", GetConfigProperties.getSuperAdminToken()))
+                .when().post(String.format("api/v1/internal/testLogin/%s", token))
                 .then().assertThat().statusCode(200);
     }
 }

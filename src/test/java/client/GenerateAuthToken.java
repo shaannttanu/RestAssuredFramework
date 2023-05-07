@@ -13,7 +13,7 @@ public class GenerateAuthToken {
     @Test
     public static void generateAuthToken(String tokenType){
 
-        RestAssured.baseURI= GetConfigProperties.getBaseUri();
+        RestAssured.baseURI= GetConfigProperties.getStgAPI();
         String adminAuthTokenResponse;
 
         if(tokenType.equalsIgnoreCase("adminAuthToken")){
@@ -36,10 +36,8 @@ public class GenerateAuthToken {
 
         if(tokenType.equalsIgnoreCase("adminAuthToken")){
             adminAuthToken=AuthToken;
-            System.out.println("AdminAuthToken : "+adminAuthToken);
         }else{
             approverAdminAuthToken=AuthToken;
-            System.out.println("ApproverAdminAuthToken : "+approverAdminAuthToken);
         }
     }
 }

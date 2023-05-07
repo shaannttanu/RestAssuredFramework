@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.SimpleTimeZone;
 
 public class GetConfigProperties {
     public static Properties prop;
@@ -19,11 +20,15 @@ public class GetConfigProperties {
         }
     }
 
-    public static String getBaseUri(){
+    public static String getStgAPI(){
         getConfigProperties();
-        return prop.getProperty("baseUri");
+        return prop.getProperty("stgAPI");
     }
 
+    public static String getStgfs(){
+        getConfigProperties();
+        return prop.getProperty("stgfs");
+    }
     public static String getRediskey(){
         getConfigProperties();
         return prop.getProperty("redisKey");
@@ -35,5 +40,9 @@ public class GetConfigProperties {
     public static String getRandomMobile(){
         getConfigProperties();
         return prop.getProperty("randomMobile");
+    }
+    public static String getAddressId(){
+        getConfigProperties();
+        return prop.getProperty("addressId");
     }
 }

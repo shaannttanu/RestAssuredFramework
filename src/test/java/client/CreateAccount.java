@@ -20,7 +20,7 @@ public class CreateAccount {
     @Test
     public static void CreateAutomationAccount(String accountType){
 
-        RestAssured.baseURI= GetConfigProperties.getBaseUri();
+        RestAssured.baseURI= GetConfigProperties.getStgAPI();
         String createAutomationAccountResponse;
 
         //CreateAutomationAccount :
@@ -53,7 +53,7 @@ public class CreateAccount {
     @Test
     public static void Login(){
 
-        RestAssured.baseURI = GetConfigProperties.getBaseUri();
+        RestAssured.baseURI = GetConfigProperties.getStgAPI();
         //Send LoginOTP api :
         String sendLoginOtpResponse=given().header("Content-Type","application/json")
                 .body(AccountCreatePayloads.sendLoginOtpPayload(randomMobile))
@@ -84,7 +84,7 @@ public class CreateAccount {
     @Test
     public static void createNewAccount(){
 
-        RestAssured.baseURI = GetConfigProperties.getBaseUri();
+        RestAssured.baseURI = GetConfigProperties.getStgAPI();
         String createNewAccountResponse=given().header("Content-Type","application/json")
                 .body(AccountCreatePayloads.accountCreatePayload(randomMobile,otp))
                 .when().post("api/v1/account/create")

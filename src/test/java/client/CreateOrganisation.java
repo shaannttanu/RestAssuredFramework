@@ -16,7 +16,7 @@ public class CreateOrganisation {
     @Test
     public static void createNewOrganisation(){
 
-        RestAssured.baseURI= GetConfigProperties.getBaseUri();
+        RestAssured.baseURI= GetConfigProperties.getStgAPI();
 
         //setting organisation name using FAKER :
         Faker faker=new Faker();
@@ -34,6 +34,5 @@ public class CreateOrganisation {
         JsonPath createOrganisationResponseJson = ReusableMethods.rawToJson(createOrganisationResponse);
         clientOrganisationId = createOrganisationResponseJson.getString("data.organisationId");
         System.out.println("OrganisationId : "+clientOrganisationId);
-        System.out.println("OrganisationName : "+organisationName);
     }
 }
