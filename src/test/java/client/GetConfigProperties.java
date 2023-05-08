@@ -29,6 +29,11 @@ public class GetConfigProperties {
         getConfigProperties();
         return prop.getProperty("stgfs");
     }
+
+    public static String getOxyzoAPI(){
+        getConfigProperties();
+        return prop.getProperty("oxyzoAPI");
+    }
     public static String getRediskey(){
         getConfigProperties();
         return prop.getProperty("redisKey");

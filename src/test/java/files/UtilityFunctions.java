@@ -1,5 +1,6 @@
 package files;
 import com.github.javafaker.Faker;
+import io.restassured.path.json.JsonPath;
 
 import java.lang.*;
 
@@ -30,5 +31,16 @@ public class UtilityFunctions {
         Faker faker = new Faker();
         String randomName = faker.name().fullName();
         return randomName;
+    }
+
+    public static String getRandomEmail(){
+        Faker faker=new Faker();
+        String randomEmail = faker.name().username()+"@gmail.com";
+        return randomEmail;
+    }
+
+    public static JsonPath rawToJson(String response){
+        JsonPath js=new JsonPath(response);
+        return js;
     }
 }

@@ -4,7 +4,8 @@ import org.testng.annotations.Test;
 public class MainSuite {
 
     @Test
-    public void createOrganisation(){
+    public void createLoanApplication(){
+
         CreateAccount.CreateAutomationAccount("AutomationAccount");
         CreateAccount.CreateAutomationAccount("ApproverAccount");
 
@@ -14,20 +15,24 @@ public class MainSuite {
         GenerateAuthToken.generateAuthToken("ApproverAdminAuthToken");
         CreateAccount.Login();
         CreateAccount.createNewAccount();
-        CreateOrganisation.createNewOrganisation();
-        VerifyOrganisation.addAddress();
-        VerifyOrganisation.addGst();
-        VerifyOrganisation.stateLevelInfo();
-        VerifyOrganisation.addAddressWithGst();
+        CreateVerifiedOrg.createNewOrganisation();
+
+        CreateVerifiedOrg.addAddress();
+        CreateVerifiedOrg.addGst();
+        CreateVerifiedOrg.stateLevelInfo();
+        CreateVerifiedOrg.addAddressWithGst();
 
         FileUpload.tempUplaod();
-        VerifyOrganisation.verifyAddress();
+        CreateVerifiedOrg.verifyAddress();
 
         FileUpload.tempUplaod();
-        VerifyOrganisation.verifyGst();
+        CreateVerifiedOrg.verifyGst();
 
         FileUpload.tempUplaod();
-        VerifyOrganisation.verifyPan();
-        VerifyOrganisation.verifyBranchRegion();
+        CreateVerifiedOrg.verifyPan();
+        CreateVerifiedOrg.verifyBranchRegion();
+
+        //creating oxyzoLoanApplication :
+        LoanFlow.CreateLoanApplication();
     }
 }
