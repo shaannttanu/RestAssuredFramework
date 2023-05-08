@@ -6,15 +6,21 @@ import files.Payload;
 import files.UtilityFunctions;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
 public class CreateVerifiedOrg {
 
     @Test
-    public static void createNewOrganisation(){
+    public static void createNewOrganisation() throws IOException {
 
         //setting organisation name using FAKER :
         Faker faker=new Faker();
@@ -28,18 +34,22 @@ public class CreateVerifiedOrg {
 
         String createOrganisationResponse = RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getStgAPI())
-                .headers(requestHeaders)
-                .body(Payload.createOrganisationPayload(GlobalVariables.randomMobile,faker.name().fullName(),GlobalVariables.organisationName))
+                    .baseUri(GetConfigProperties.getStgAPI())
+                    .headers(requestHeaders)
+                    .body(Payload.createOrganisationPayload(GlobalVariables.randomMobile,faker.name().fullName(),GlobalVariables.organisationName))
                 .when()
-                .post("api/v2/lead")
+                    .post("api/v2/lead")
                 .then()
-                .assertThat().statusCode(201)
-                .extract().response().asString();
+                    .assertThat().statusCode(201)
+                    .extract().response().asString();
 
         JsonPath createOrganisationResponseJson = UtilityFunctions.rawToJson(createOrganisationResponse);
         GlobalVariables.clientOrganisationId = createOrganisationResponseJson.getString("data.organisationId");
         System.out.println("OrganisationId : "+GlobalVariables.clientOrganisationId);
+
+        //writing response to a file :
+        String methodName = new Throwable().getStackTrace()[0].getMethodName();
+        UtilityFunctions.writeToFile(createOrganisationResponse,methodName);
     }
     //Adding address :
     @Test
@@ -52,13 +62,13 @@ public class CreateVerifiedOrg {
 
         RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getStgAPI())
+                    .baseUri(GetConfigProperties.getStgAPI())
                 .headers(requestHeaders)
-                .body(Payload.saveAddressPayload(GlobalVariables.clientOrganisationId, UtilityFunctions.getRandomName(), GlobalVariables.randomMobile))
+                    .body(Payload.saveAddressPayload(GlobalVariables.clientOrganisationId, UtilityFunctions.getRandomName(), GlobalVariables.randomMobile))
                 .when()
-                .put(String.format("api/v1/org/address/%s",GlobalVariables.buyerAccountId))
+                    .put(String.format("api/v1/org/address/%s",GlobalVariables.buyerAccountId))
                 .then()
-                .assertThat().statusCode(200);
+                    .assertThat().statusCode(200);
 
     }
     //Adding GST :
@@ -72,13 +82,13 @@ public class CreateVerifiedOrg {
 
         RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getStgAPI())
+                    .baseUri(GetConfigProperties.getStgAPI())
                 .headers(requestHeaders)
-                .body(Payload.saveGstPayload(GlobalVariables.gstNumber))
+                    .body(Payload.saveGstPayload(GlobalVariables.gstNumber))
                 .when()
-                .post(String.format("api/v1/org/tax/%s/taxes/HR",GlobalVariables.clientOrganisationId))
-                .then().
-                assertThat().statusCode(200);
+                    .post(String.format("api/v1/org/tax/%s/taxes/HR",GlobalVariables.clientOrganisationId))
+                .then()
+                    .assertThat().statusCode(200);
 
     }
 
@@ -92,12 +102,12 @@ public class CreateVerifiedOrg {
 
         String stateLevelInfoResponse= RestAssured.given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .headers(requestHeaders)
+                    .headers(requestHeaders)
                 .when()
-                .get(String.format("api/v1/org/organisation/stateLevelInfo/%s",GlobalVariables.clientOrganisationId))
+                    .get(String.format("api/v1/org/organisation/stateLevelInfo/%s",GlobalVariables.clientOrganisationId))
                 .then()
-                .assertThat().statusCode(200)
-                .extract().response().asString();
+                    .assertThat().statusCode(200)
+                    .extract().response().asString();
 
         JsonPath stateLevelInfoResponseJson = UtilityFunctions.rawToJson(stateLevelInfoResponse);
         GlobalVariables.stateTaxInfoId= stateLevelInfoResponseJson.getString("data.HR.stateTaxInfoId");
@@ -113,15 +123,16 @@ public class CreateVerifiedOrg {
         requestHeaders.put("X-OFB-PLATFORM","WEB_SITE");
         requestHeaders.put("X-REFERRER-DOMAIN","ADMIN");
 
-        String addAddressWithGstResponse = RestAssured.given()
-                .baseUri(GetConfigProperties.getStgAPI())
-                .headers(requestHeaders)
-                .body(Payload.addAddressWithGstPayload(GlobalVariables.gstNumber,GlobalVariables.clientOrganisationId))
+        String addAddressWithGstResponse = RestAssured
+                .given()
+                    .baseUri(GetConfigProperties.getStgAPI())
+                    .headers(requestHeaders)
+                    .body(Payload.addAddressWithGstPayload(GlobalVariables.gstNumber,GlobalVariables.clientOrganisationId))
                 .when()
-                .post(String.format("api/v2/org/address/%s",GetConfigProperties.getAddressId()))
+                    .post(String.format("api/v2/org/address/%s",GetConfigProperties.getAddressId()))
                 .then()
-                .assertThat().statusCode(200)
-                .extract().response().asString();
+                    .assertThat().statusCode(200)
+                    .extract().response().asString();
 
         JsonPath addAddressWithGstResponseJson = UtilityFunctions.rawToJson(addAddressWithGstResponse);
         GlobalVariables.clientAddressId = addAddressWithGstResponseJson.getString("data.addressId");
@@ -139,13 +150,13 @@ public class CreateVerifiedOrg {
 
         RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getStgAPI())
-                .headers(requestHeaders)
-                .body(Payload.verifyAddressPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation))
+                    .baseUri(GetConfigProperties.getStgAPI())
+                    .headers(requestHeaders)
+                    .body(Payload.verifyAddressPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation))
                 .when()
-                .post(String.format("api/v2/org/address/%s/%s/verify",GlobalVariables.clientOrganisationId,GlobalVariables.clientAddressId))
+                    .post(String.format("api/v2/org/address/%s/%s/verify",GlobalVariables.clientOrganisationId,GlobalVariables.clientAddressId))
                 .then()
-                .assertThat().statusCode(200);
+                    .assertThat().statusCode(200);
 
     }
 
@@ -158,13 +169,13 @@ public class CreateVerifiedOrg {
 
         RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getStgAPI())
-                .headers(requestHeaders)
-                .body(Payload.verifyGstPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation))
+                    .baseUri(GetConfigProperties.getStgAPI())
+                    .headers(requestHeaders)
+                    .body(Payload.verifyGstPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation))
                 .when()
-                .put(String.format("api/v1/org/organisation/%s/GST/%s/verify",GlobalVariables.clientOrganisationId,GlobalVariables.stateTaxInfoId))
+                    .put(String.format("api/v1/org/organisation/%s/GST/%s/verify",GlobalVariables.clientOrganisationId,GlobalVariables.stateTaxInfoId))
                 .then()
-                .assertThat().statusCode(200);
+                    .assertThat().statusCode(200);
 
     }
 
@@ -177,33 +188,33 @@ public class CreateVerifiedOrg {
 
         RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getStgAPI())
-                .headers(requestHeaders)
-                .body(Payload.verifyPanPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation,GlobalVariables.panNumber))
+                    .baseUri(GetConfigProperties.getStgAPI())
+                    .headers(requestHeaders)
+                    .body(Payload.verifyPanPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation,GlobalVariables.panNumber))
                 .when()
-                .put(String.format("api/v1/org/organisation/%s/verifyPan",GlobalVariables.clientOrganisationId))
+                    .put(String.format("api/v1/org/organisation/%s/verifyPan",GlobalVariables.clientOrganisationId))
                 .then()
-                .assertThat().statusCode(200);
+                    .assertThat().statusCode(200);
 
     }
 
     //verifyBranchRegion API :
-    public static void verifyBranchRegion(){
+    public static void verifyBranchRegion() throws IOException {
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
         requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
 
-        RestAssured
+        String response = RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getStgAPI())
+                    .baseUri(GetConfigProperties.getStgAPI())
                 .headers(requestHeaders)
-                .body(Payload.verifyBranchRegionPayload())
+                    .body(Payload.verifyBranchRegionPayload())
                 .when()
-                .put(String.format("api/v1/org/organisation/%s/BRANCH_REGION/verify",GlobalVariables.clientOrganisationId))
+                    .put(String.format("api/v1/org/organisation/%s/BRANCH_REGION/verify",GlobalVariables.clientOrganisationId))
                 .then()
-                .assertThat().statusCode(200);
+                    .assertThat().statusCode(200)
+                    .extract().response().asString();
 
-        System.out.println("Organisation Verified successfully!");
     }
 }

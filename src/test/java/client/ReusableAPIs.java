@@ -23,14 +23,14 @@ public class ReusableAPIs {
 
         String tempUploadResponse = RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getStgfs())
-                .headers(requestHeaders)
-                .multiPart("file",testFile)
+                    .baseUri(GetConfigProperties.getStgfs())
+                    .headers(requestHeaders)
+                    .multiPart("file",testFile)
                 .when()
-                .post("api/v1/file/tempUpload")
+                    .post("api/v1/file/tempUpload")
                 .then()
-                .assertThat().statusCode(200)
-                .extract().response().asString();
+                    .assertThat().statusCode(200)
+                    .extract().response().asString();
 
         JsonPath tempUploadResponseJson = UtilityFunctions.rawToJson(tempUploadResponse);
         GlobalVariables.tempFileLocation = tempUploadResponseJson.getString("data.tempUrl");
@@ -42,12 +42,12 @@ public class ReusableAPIs {
 
         RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getStgAPI())
-                .queryParam("key", GetConfigProperties.getRediskey())
+                    .baseUri(GetConfigProperties.getStgAPI())
+                    .queryParam("key", GetConfigProperties.getRediskey())
                 .when()
-                .post(String.format("api/v1/internal/testLogin/%s", token))
+                    .post(String.format("api/v1/internal/testLogin/%s", token))
                 .then()
-                .assertThat().statusCode(200);
+                    .assertThat().statusCode(200);
     }
 
 }

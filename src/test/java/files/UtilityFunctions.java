@@ -2,7 +2,14 @@ package files;
 import com.github.javafaker.Faker;
 import io.restassured.path.json.JsonPath;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.lang.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 
 public class UtilityFunctions {
@@ -42,5 +49,22 @@ public class UtilityFunctions {
     public static JsonPath rawToJson(String response){
         JsonPath js=new JsonPath(response);
         return js;
+    }
+
+    public static void writeToFile(String content , String methodName) throws IOException {
+
+        String path = "C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\response.txt";
+
+        try {
+            Files.write(Paths.get(path),String.format("%s response : \n",methodName).getBytes(),StandardOpenOption.APPEND);
+            Files.write(Paths.get(path), content.getBytes(), StandardOpenOption.APPEND);
+            Files.write(Paths.get(path), "\n".getBytes(), StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            System.out.println(e.getStackTrace());
+        }
+    }
+
+    public static void eraseFileContents() throws IOException {
+        new PrintWriter("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\response.txt").close();
     }
 }

@@ -221,4 +221,45 @@ public class Payload {
                 "}";
         return json;
     }
+
+    public static String [] addOxyzoSuperAdminPayload(String automationId,String approverId){
+
+        String [] array = new String[2];
+        array[0]=automationId;
+        array[1]=approverId;
+
+        return array;
+    }
+
+    public static String updateLoanApplicationPayload(String clientAppId,String loanType,String clientId){
+
+        String json = "{\n" +
+                "\"applicationId\":\""+clientAppId+"\",\n" +
+                "\"loanAmount\":1000000,\n" +
+                "\"loanType\":\""+loanType+"\",\n" +
+                "\"loanTenure\":3,\n" +
+                "\"purpose\":null,\n" +
+                "\"version\":\"2\",\n" +
+                "\"evaluation\":{\n" +
+                "\"overallEvaluation\":null\n" +
+                "},\n" +
+                "\"offer\":{\n" +
+                "\"limitOffer\":null\n" +
+                "},\n" +
+                "\"clientId\":\""+clientId+"\",\n" +
+                "\"contactPersonName\":null,\n" +
+                "\"contactPersonMobile\":\"\",\n" +
+                "\"contactPersonEmail\":\"\",\n" +
+                "\"processingOfficerAccountId\":\"\",\n" +
+                "\"processingOfficerAccount\":null,\n" +
+                "\"salesPersonAccountId\":\"6130569898436333872\",\n" +
+                "\"mode\":\"\",\n" +
+                "\"documentCollectorAccountId\":\"6130569898436333872\",\n" +
+                "\"underwriterAccountId\":\"\",\n" +
+                "\"loanApplicationStatus\":\"VERIFIED\",\n" +
+                "\"contactPersonDesignation\":\"\",\n" +
+                "\"remarks\":\"\"\n" +
+                "}";
+        return json;
+    }
 }

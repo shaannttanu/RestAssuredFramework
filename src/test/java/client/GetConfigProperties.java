@@ -50,4 +50,9 @@ public class GetConfigProperties {
         getConfigProperties();
         return prop.getProperty("addressId");
     }
+
+    public static String getCIN(){
+        getConfigProperties();
+        return prop.getProperty("CIN");
+    }
 }

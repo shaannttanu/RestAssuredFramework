@@ -20,14 +20,14 @@ public class LoanFlow {
 
         String response = RestAssured
                 .given()
-                .baseUri(GetConfigProperties.getOxyzoAPI())
-                .headers(requestHeaders)
-                .body(Payload.getCreateLoaAnApplicationPayload(GlobalVariables.contactName,GlobalVariables.contactPersonEmail,GetConfigProperties.getRandomMobile(),GlobalVariables.clientOrganisationId,GlobalVariables.organisationName))
+                    .baseUri(GetConfigProperties.getOxyzoAPI())
+                    .headers(requestHeaders)
+                    .body(Payload.getCreateLoaAnApplicationPayload(GlobalVariables.contactName,GlobalVariables.contactPersonEmail,GetConfigProperties.getRandomMobile(),GlobalVariables.clientOrganisationId,GlobalVariables.organisationName))
                 .when()
-                .post("api/v1/oxyzo/lead")
+                    .post("api/v1/oxyzo/lead")
                 .then()
-                .assertThat().statusCode(200)
-                .extract().response().asString();
+                    .assertThat().statusCode(200)
+                    .extract().response().asString();
 
         JsonPath responseJson = UtilityFunctions.rawToJson(response);
         GlobalVariables.loanAmount= responseJson.getString("data.loanAmount");
@@ -35,6 +35,49 @@ public class LoanFlow {
         GlobalVariables.clientAppId = responseJson.getString("data.loanApplicationId");
 
         System.out.println("LoanApplicatioId : "+GlobalVariables.clientAppId);
+
+    }
+
+    @Test
+    public static void addOxyzoSuperAdmin(){
+
+        Map<String ,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
+
+        String [] addOxyzoSuperAdminPayload = Payload.addOxyzoSuperAdminPayload(GlobalVariables.automationId,GlobalVariables.approverId);
+
+        RestAssured
+                .given()
+                    .baseUri(GetConfigProperties.getOxyzoAPI())
+                    .headers(requestHeaders)
+                    .queryParam("key","ofbdev@2016")
+                    .body(addOxyzoSuperAdminPayload)
+                .when()
+                    .put("api/v1/oxyzo/internal/role/SUPER_ADMIN_ROLE_ID/addUsers")
+                .then()
+                    .assertThat().statusCode(200)
+                    .extract().response().asString();
+
+    }
+
+    @Test
+    public static void updateLoanApplication(){
+
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("X-OFB-TOKEN",GlobalVariables.adminAuthToken);
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("CIN",GetConfigProperties.getCIN());
+
+        String response = RestAssured
+                .given()
+                    .headers(requestHeaders)
+                    .body(Payload.updateLoanApplicationPayload(GlobalVariables.clientAppId,"PURCHASE_FINANCING",GlobalVariables.clientOrganisationId))
+                .when()
+                    .patch("api/v1/oxyzo/admin/loanApplication")
+                .then()
+                    .assertThat().statusCode(200)
+                    .extract().response().asString();
 
     }
 }

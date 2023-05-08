@@ -1,10 +1,16 @@
 package client;
+import files.UtilityFunctions;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class MainSuite {
 
     @Test
-    public void createLoanApplication(){
+    public void createLoanApplication() throws IOException {
+
+        //erasing contents of file before each run :
+        UtilityFunctions.eraseFileContents();
 
         CreateAccount.CreateAutomationAccount("AutomationAccount");
         CreateAccount.CreateAutomationAccount("ApproverAccount");
@@ -35,5 +41,7 @@ public class MainSuite {
 
         //creating oxyzoLoanApplication :
         LoanFlow.CreateLoanApplication();
+        LoanFlow.addOxyzoSuperAdmin();
+
     }
 }
