@@ -1,8 +1,71 @@
 package files;
 
-import javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec;
+public class Payload {
 
-public class OrganisationPayloads {
+    //AccountCreate Payloads :
+    public static String createAutomationAccountPayload(){
+        String json= "{\n" +
+                "  \"name\": \"Automation Bot\",\n" +
+                "  \"mobile\":\"1000000000\",\n" +
+                "  \"password\":\"##ofbdevautomation@2016##\",\n" +
+                "  \"email\":\"\"\n" +
+                "}";
+        return json;
+    }
+
+    public static String createApproverAccountPayload(){
+        String json= "{\n" +
+                "  \"name\": \"Approver Bot\",\n" +
+                "  \"mobile\":\"1000000001\",\n" +
+                "  \"password\":\"##ofbdevautomation@2016##\",\n" +
+                "  \"email\":\"\"\n" +
+                "}";
+        return json;
+    }
+
+    public static String sendLoginOtpPayload(String randomMobile){
+
+        String json="{\"mobile\":\""+randomMobile+"\"}";
+        return json;
+    }
+
+    public static String accountCreatePayload(String randomMobile,String clientOtp){
+        String json = "{\n" +
+                "\t\"profiles\": {\n" +
+                "\t\t\"BUYER\": {\n" +
+                "\t\t\t\"type\":\"buyer\"\n" +
+                "\t\t},\n" +
+                "\t\t\"OXYZOAPPLICANT\": {\n" +
+                "\t\t\t\"type\":\"oxyzoapplicant\"\n" +
+                "\t\t}\n" +
+                "\t},\n" +
+                "\t\"mobile\":\""+randomMobile+"\",\n" +
+                "\t\"password\":\"Password@123\",\n" +
+                "\t\"otp\":\""+clientOtp+"\"\n" +
+                "}";
+
+        return json;
+    }
+
+    //AdminAuthToken Payloads :
+    public static String adminAuthTokenPayload(){
+        String json="{\n" +
+                "  \"mobile\":\"1000000000\",\n" +
+                "  \"password\":\"##ofbdevautomation@2016##\",\n" +
+                "  \"userProfileType\":\"OXYZOAPPLICANT\"\n" +
+                "}";
+        return json;
+    }
+    public static String approverAdminAuthTokenPayload(){
+        String json = "{\n" +
+                "  \"mobile\":\"1000000001\",\n" +
+                "  \"password\":\"##ofbdevautomation@2016##\",\n" +
+                "  \"userProfileType\":\"OXYZOAPPLICANT\"\n" +
+                "}";
+        return json;
+    }
+    //CreateVerifiedOrganisation Payloads :
+
     public static String createOrganisationPayload(String randomMobile,String contactName,String organisationName){
 
         String json= "{\n" +
@@ -140,6 +203,22 @@ public class OrganisationPayloads {
     public static String verifyBranchRegionPayload(){
 
         String json = "{}";
+        return json;
+    }
+
+    //Loan Payloads :
+    public static String getCreateLoaAnApplicationPayload(String contactPersonName,String contactPersonEmail,
+                                                         String randomMobile,String clientOrganisationId,
+                                                         String clientName){
+        String json = "{\n" +
+                "\"loanAmount\":\"1000000\",\n" +
+                "\"contactPersonName\":\""+contactPersonName+"\",\n" +
+                "\"contactPersonEmail\":\""+contactPersonEmail+"\",\n" +
+                "\"bureauAcceptance\":\"true\",\n" +
+                "\"contactPersonNumber\":\""+randomMobile+"\",\n" +
+                "\"organisationId\" : \""+clientOrganisationId+"\",\n" +
+                "\"clientName\":\""+clientName+"\"\n" +
+                "}";
         return json;
     }
 }

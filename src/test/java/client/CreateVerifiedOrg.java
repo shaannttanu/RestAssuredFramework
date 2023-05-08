@@ -2,13 +2,14 @@ package client;
 
 import com.github.javafaker.Faker;
 import files.GlobalVariables;
-import files.OrganisationPayloads;
+import files.Payload;
 import files.UtilityFunctions;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CreateVerifiedOrg {
 
@@ -19,16 +20,21 @@ public class CreateVerifiedOrg {
         Faker faker=new Faker();
         GlobalVariables.organisationName = faker.company().name()+ " Testing Company";
 
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GetConfigProperties.getSuperAdminToken());
+        requestHeaders.put("X-OFB-PLATFORM","WEB_SITE");
+        requestHeaders.put("X-REFERRER-DOMAIN","BUYER");
+
         String createOrganisationResponse = RestAssured
                 .given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .header("Content-Type","application/json")
-                .header("X-OFB-TOKEN", GetConfigProperties.getSuperAdminToken())
-                .header("X-OFB-PLATFORM","WEB_SITE")
-                .header("X-REFERRER-DOMAIN","BUYER")
-                .body(OrganisationPayloads.createOrganisationPayload(GlobalVariables.randomMobile,faker.name().fullName(),GlobalVariables.organisationName))
-                .when().post("api/v2/lead")
-                .then().assertThat().statusCode(201)
+                .headers(requestHeaders)
+                .body(Payload.createOrganisationPayload(GlobalVariables.randomMobile,faker.name().fullName(),GlobalVariables.organisationName))
+                .when()
+                .post("api/v2/lead")
+                .then()
+                .assertThat().statusCode(201)
                 .extract().response().asString();
 
         JsonPath createOrganisationResponseJson = UtilityFunctions.rawToJson(createOrganisationResponse);
@@ -39,30 +45,40 @@ public class CreateVerifiedOrg {
     @Test
     public static void addAddress(){
 
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
+        requestHeaders.put("X-OFB-PLATFORM","ADMIN");
+
         RestAssured
                 .given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .header("X-OFB-PLATFORM","ADMIN")
-                .header("X-OFB-TOKEN",GlobalVariables.adminAuthToken)
-                .header("Content-Type","application/json")
-                .body(OrganisationPayloads.saveAddressPayload(GlobalVariables.clientOrganisationId, UtilityFunctions.getRandomName(), GlobalVariables.randomMobile))
-                .when().put(String.format("api/v1/org/address/%s",GlobalVariables.buyerAccountId))
-                .then().assertThat().statusCode(200);
+                .headers(requestHeaders)
+                .body(Payload.saveAddressPayload(GlobalVariables.clientOrganisationId, UtilityFunctions.getRandomName(), GlobalVariables.randomMobile))
+                .when()
+                .put(String.format("api/v1/org/address/%s",GlobalVariables.buyerAccountId))
+                .then()
+                .assertThat().statusCode(200);
 
     }
     //Adding GST :
     @Test
     public static void addGst(){
 
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
+        requestHeaders.put("X-OFB-PLATFORM","ADMIN");
+
         RestAssured
                 .given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .header("X-OFB-PLATFORM","ADMIN")
-                .header("X-OFB-TOKEN",GlobalVariables.adminAuthToken)
-                .header("Content-Type","application/json")
-                .body(OrganisationPayloads.saveGstPayload(GlobalVariables.gstNumber))
-                .when().post(String.format("api/v1/org/tax/%s/taxes/HR",GlobalVariables.clientOrganisationId))
-                .then().assertThat().statusCode(200);
+                .headers(requestHeaders)
+                .body(Payload.saveGstPayload(GlobalVariables.gstNumber))
+                .when()
+                .post(String.format("api/v1/org/tax/%s/taxes/HR",GlobalVariables.clientOrganisationId))
+                .then().
+                assertThat().statusCode(200);
 
     }
 
@@ -70,12 +86,17 @@ public class CreateVerifiedOrg {
     @Test
     public static void stateLevelInfo(){
 
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
+
         String stateLevelInfoResponse= RestAssured.given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .header("X-OFB-TOKEN",GlobalVariables.adminAuthToken)
-                .header("Content-Type","application/json")
-                .when().get(String.format("api/v1/org/organisation/stateLevelInfo/%s",GlobalVariables.clientOrganisationId))
-                .then().assertThat().statusCode(200)
+                .headers(requestHeaders)
+                .when()
+                .get(String.format("api/v1/org/organisation/stateLevelInfo/%s",GlobalVariables.clientOrganisationId))
+                .then()
+                .assertThat().statusCode(200)
                 .extract().response().asString();
 
         JsonPath stateLevelInfoResponseJson = UtilityFunctions.rawToJson(stateLevelInfoResponse);
@@ -86,15 +107,20 @@ public class CreateVerifiedOrg {
     @Test
     public static void addAddressWithGst(){
 
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
+        requestHeaders.put("X-OFB-PLATFORM","WEB_SITE");
+        requestHeaders.put("X-REFERRER-DOMAIN","ADMIN");
+
         String addAddressWithGstResponse = RestAssured.given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .header("X-REFERRER-DOMAIN","ADMIN")
-                .header("X-OFB-TOKEN",GlobalVariables.adminAuthToken)
-                .header("Content-type","application/json")
-                .header("X-OFB-PLATFORM","WEB_SITE")
-                .body(OrganisationPayloads.addAddressWithGstPayload(GlobalVariables.gstNumber,GlobalVariables.clientOrganisationId))
-                .when().post(String.format("api/v2/org/address/%s",GetConfigProperties.getAddressId()))
-                .then().assertThat().statusCode(200)
+                .headers(requestHeaders)
+                .body(Payload.addAddressWithGstPayload(GlobalVariables.gstNumber,GlobalVariables.clientOrganisationId))
+                .when()
+                .post(String.format("api/v2/org/address/%s",GetConfigProperties.getAddressId()))
+                .then()
+                .assertThat().statusCode(200)
                 .extract().response().asString();
 
         JsonPath addAddressWithGstResponseJson = UtilityFunctions.rawToJson(addAddressWithGstResponse);
@@ -105,14 +131,17 @@ public class CreateVerifiedOrg {
     //verifyAddress API :
     public static void verifyAddress(){
 
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
+        requestHeaders.put("X-OFB-PLATFORM","WEB_SITE");
+        requestHeaders.put("X-REFERRER-DOMAIN","ADMIN");
+
         RestAssured
                 .given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .header("X-REFERRER-DOMAIN","ADMIN")
-                .header("X-OFB-TOKEN",GlobalVariables.adminAuthToken)
-                .header("Content-type","application/json")
-                .header("X-OFB-PLATFORM","WEB_SITE")
-                .body(OrganisationPayloads.verifyAddressPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation))
+                .headers(requestHeaders)
+                .body(Payload.verifyAddressPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation))
                 .when()
                 .post(String.format("api/v2/org/address/%s/%s/verify",GlobalVariables.clientOrganisationId,GlobalVariables.clientAddressId))
                 .then()
@@ -123,42 +152,57 @@ public class CreateVerifiedOrg {
     //verifyGST API :
     public static void verifyGst(){
 
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
+
         RestAssured
                 .given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .header("X-OFB-TOKEN",GlobalVariables.adminAuthToken)
-                .header("Content-type","application/json")
-                .body(OrganisationPayloads.verifyGstPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation))
-                .when().put(String.format("api/v1/org/organisation/%s/GST/%s/verify",GlobalVariables.clientOrganisationId,GlobalVariables.stateTaxInfoId))
-                .then().assertThat().statusCode(200);
+                .headers(requestHeaders)
+                .body(Payload.verifyGstPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation))
+                .when()
+                .put(String.format("api/v1/org/organisation/%s/GST/%s/verify",GlobalVariables.clientOrganisationId,GlobalVariables.stateTaxInfoId))
+                .then()
+                .assertThat().statusCode(200);
 
     }
 
     //verifyPAN API :
     public static void verifyPan(){
 
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
+
         RestAssured
                 .given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .header("X-OFB-TOKEN",GlobalVariables.adminAuthToken)
-                .header("Content-type","application/json")
-                .body(OrganisationPayloads.verifyPanPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation,GlobalVariables.panNumber))
-                .when().put(String.format("api/v1/org/organisation/%s/verifyPan",GlobalVariables.clientOrganisationId))
-                .then().assertThat().statusCode(200);
+                .headers(requestHeaders)
+                .body(Payload.verifyPanPayload(GlobalVariables.fingerPrint,GlobalVariables.tempFileLocation,GlobalVariables.panNumber))
+                .when()
+                .put(String.format("api/v1/org/organisation/%s/verifyPan",GlobalVariables.clientOrganisationId))
+                .then()
+                .assertThat().statusCode(200);
 
     }
 
     //verifyBranchRegion API :
     public static void verifyBranchRegion(){
 
+        Map<String,String> requestHeaders = new HashMap<>();
+        requestHeaders.put("Content-Type","application/json");
+        requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
+
         RestAssured
                 .given()
                 .baseUri(GetConfigProperties.getStgAPI())
-                .header("X-OFB-TOKEN",GlobalVariables.adminAuthToken)
-                .header("Content-type","application/json")
-                .body(OrganisationPayloads.verifyBranchRegionPayload())
-                .when().put(String.format("api/v1/org/organisation/%s/BRANCH_REGION/verify",GlobalVariables.clientOrganisationId))
-                .then().assertThat().statusCode(200);
+                .headers(requestHeaders)
+                .body(Payload.verifyBranchRegionPayload())
+                .when()
+                .put(String.format("api/v1/org/organisation/%s/BRANCH_REGION/verify",GlobalVariables.clientOrganisationId))
+                .then()
+                .assertThat().statusCode(200);
 
         System.out.println("Organisation Verified successfully!");
     }

@@ -9,26 +9,27 @@ public class MainSuite {
         CreateAccount.CreateAutomationAccount("AutomationAccount");
         CreateAccount.CreateAutomationAccount("ApproverAccount");
 
-        TokenAuth.tokenAuth(GetConfigProperties.getSuperAdminToken());
+        ReusableAPIs.tokenAuth(GetConfigProperties.getSuperAdminToken());
 
-        GenerateAuthToken.generateAuthToken("adminAuthToken");
-        GenerateAuthToken.generateAuthToken("ApproverAdminAuthToken");
+        CreateAccount.generateAuthToken("adminAuthToken");
+        CreateAccount.generateAuthToken("ApproverAdminAuthToken");
         CreateAccount.Login();
         CreateAccount.createNewAccount();
-        CreateVerifiedOrg.createNewOrganisation();
 
+        //Organisaation Creating and Verification :
+        CreateVerifiedOrg.createNewOrganisation();
         CreateVerifiedOrg.addAddress();
         CreateVerifiedOrg.addGst();
         CreateVerifiedOrg.stateLevelInfo();
         CreateVerifiedOrg.addAddressWithGst();
 
-        FileUpload.tempUplaod();
+        ReusableAPIs.tempUplaod();
         CreateVerifiedOrg.verifyAddress();
 
-        FileUpload.tempUplaod();
+        ReusableAPIs.tempUplaod();
         CreateVerifiedOrg.verifyGst();
 
-        FileUpload.tempUplaod();
+        ReusableAPIs.tempUplaod();
         CreateVerifiedOrg.verifyPan();
         CreateVerifiedOrg.verifyBranchRegion();
 
