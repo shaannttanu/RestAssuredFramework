@@ -1,4 +1,5 @@
 package client;
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import files.Payload;
 import files.UtilityFunctions;
 import files.GlobalVariables;
@@ -7,17 +8,21 @@ import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
+import java.io.FileInputStream;
+import java.security.PublicKey;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class CreateAccount {
     @Test
-    public static void CreateAutomationAccount(String accountType){
+    public static void CreateAutomationAccount(String accountType) throws Exception{
+
         String createAutomationAccountResponse;
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
+
         //CreateAutomationAccount :
         if(accountType.equalsIgnoreCase("automationAccount")){
             createAutomationAccountResponse = RestAssured
@@ -54,9 +59,10 @@ public class CreateAccount {
 
     //Generate AdminAuthToken and ApproverAdminAuthToken
     @Test
-    public static void generateAuthToken(String tokenType){
+    public static void generateAuthToken(String tokenType) throws Exception{
 
         String adminAuthTokenResponse;
+
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
 
@@ -96,10 +102,11 @@ public class CreateAccount {
 
     //SendLogin OTP and getOTP calls :
     @Test
-    public static void Login(){
+    public static void Login() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
+
         //Send LoginOTP api :
         String sendLoginOtpResponse = RestAssured
                 .given()
@@ -115,12 +122,11 @@ public class CreateAccount {
         Assert.assertEquals(sendLoginOtpResponseJson.get("data"),"OTP Sent");
 
 
-
         //GetOTP API :
 
         Map<String,String> queryParameters = new HashMap<>();
         queryParameters.put("mobile",GlobalVariables.randomMobile);
-        queryParameters.put("key", GetConfigProperties.getRediskey());
+        queryParameters.put("key",GetConfigProperties.getRediskey());
 
         String getOtpResponse = RestAssured
                 .given()
@@ -140,7 +146,7 @@ public class CreateAccount {
     }
 
     @Test
-    public static void createNewAccount() throws IOException {
+    public static void createNewAccount() throws Exception {
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -163,10 +169,6 @@ public class CreateAccount {
 
         GlobalVariables.buyerAccountId = createNewAccountResponseJson.getString("data.minAccountDto.accountId");
         GlobalVariables.clientAuthToken = createNewAccountResponseJson.getString("data.token");
-
-        //writing response to a file :
-        String methodName = new Throwable().getStackTrace()[0].getMethodName();
-        UtilityFunctions.writeToFile(createNewAccountResponse,methodName);
 
     }
 

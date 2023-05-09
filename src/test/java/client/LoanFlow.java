@@ -7,12 +7,15 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class LoanFlow {
+
     @Test
-    public static void CreateLoanApplication(){
+    public static void CreateLoanApplication() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -39,7 +42,7 @@ public class LoanFlow {
     }
 
     @Test
-    public static void addOxyzoSuperAdmin(){
+    public static void addOxyzoSuperAdmin() throws Exception{
 
         Map<String ,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -62,12 +65,13 @@ public class LoanFlow {
     }
 
     @Test
-    public static void updateLoanApplication(){
+    public static void updateLoanApplication() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("X-OFB-TOKEN",GlobalVariables.adminAuthToken);
         requestHeaders.put("Content-Type","application/json");
         requestHeaders.put("CIN",GetConfigProperties.getCIN());
+
 
         String response = RestAssured
                 .given()

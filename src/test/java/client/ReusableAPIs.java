@@ -13,13 +13,14 @@ import java.util.Map;
 public class ReusableAPIs {
 
     @Test
-    public static void tempUplaod(){
+    public static void tempUplaod() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("X-OFB-PLATFORM","ADMIN");
         requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
 
         File testFile  = new File("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\download.jpg");
+
 
         String tempUploadResponse = RestAssured
                 .given()
@@ -38,7 +39,7 @@ public class ReusableAPIs {
     }
 
     @Test
-    public static void tokenAuth(String token){
+    public static void tokenAuth(String token) throws Exception{
 
         RestAssured
                 .given()

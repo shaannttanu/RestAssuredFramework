@@ -1,8 +1,9 @@
 package files;
-import client.GetConfigProperties;
 import com.github.javafaker.Faker;
 
+import java.io.FileInputStream;
 import java.security.PublicKey;
+import java.util.Properties;
 
 public class GlobalVariables {
 
@@ -13,7 +14,7 @@ public class GlobalVariables {
     public static String contactPersonEmail = UtilityFunctions.getRandomEmail();
     public static String currentTime ;
     public static String otp;
-    public static String randomMobile= GetConfigProperties.getRandomMobile();
+    public static String randomMobile= "9718415454";
     public static String panNumber;
     public static String gstNumber;
     public static String buyerAccountId;

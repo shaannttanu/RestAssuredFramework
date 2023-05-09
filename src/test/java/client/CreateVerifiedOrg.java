@@ -6,21 +6,16 @@ import files.Payload;
 import files.UtilityFunctions;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class CreateVerifiedOrg {
-
     @Test
-    public static void createNewOrganisation() throws IOException {
+    public static void createNewOrganisation() throws Exception {
 
         //setting organisation name using FAKER :
         Faker faker=new Faker();
@@ -47,13 +42,10 @@ public class CreateVerifiedOrg {
         GlobalVariables.clientOrganisationId = createOrganisationResponseJson.getString("data.organisationId");
         System.out.println("OrganisationId : "+GlobalVariables.clientOrganisationId);
 
-        //writing response to a file :
-        String methodName = new Throwable().getStackTrace()[0].getMethodName();
-        UtilityFunctions.writeToFile(createOrganisationResponse,methodName);
     }
     //Adding address :
     @Test
-    public static void addAddress(){
+    public static void addAddress() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -73,7 +65,7 @@ public class CreateVerifiedOrg {
     }
     //Adding GST :
     @Test
-    public static void addGst(){
+    public static void addGst() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -94,7 +86,7 @@ public class CreateVerifiedOrg {
 
     //get stateLevelInfo API :
     @Test
-    public static void stateLevelInfo(){
+    public static void stateLevelInfo() throws  Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -115,7 +107,7 @@ public class CreateVerifiedOrg {
 
     //add addressWithGst API:
     @Test
-    public static void addAddressWithGst(){
+    public static void addAddressWithGst() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -140,7 +132,7 @@ public class CreateVerifiedOrg {
     }
 
     //verifyAddress API :
-    public static void verifyAddress(){
+    public static void verifyAddress() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -161,7 +153,7 @@ public class CreateVerifiedOrg {
     }
 
     //verifyGST API :
-    public static void verifyGst(){
+    public static void verifyGst() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -180,7 +172,7 @@ public class CreateVerifiedOrg {
     }
 
     //verifyPAN API :
-    public static void verifyPan(){
+    public static void verifyPan() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
@@ -199,13 +191,13 @@ public class CreateVerifiedOrg {
     }
 
     //verifyBranchRegion API :
-    public static void verifyBranchRegion() throws IOException {
+    public static void verifyBranchRegion() throws Exception {
 
         Map<String,String> requestHeaders = new HashMap<>();
         requestHeaders.put("Content-Type","application/json");
         requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
 
-        String response = RestAssured
+        RestAssured
                 .given()
                     .baseUri(GetConfigProperties.getStgAPI())
                 .headers(requestHeaders)
