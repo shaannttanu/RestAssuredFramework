@@ -1,35 +1,31 @@
 package files;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 public class Payload {
 
     //AccountCreate Payloads :
-    public static String createAutomationAccountPayload(){
+    @Contract(pure = true)
+    public static @NotNull String automationApproverAccountPayload(String name , String mobile){
         String json= "{\n" +
-                "  \"name\": \"Automation Bot\",\n" +
-                "  \"mobile\":\"1000000000\",\n" +
+                "  \"name\": \""+name+"\",\n" +
+                "  \"mobile\":\""+mobile+"\",\n" +
                 "  \"password\":\"##ofbdevautomation@2016##\",\n" +
                 "  \"email\":\"\"\n" +
                 "}";
         return json;
     }
 
-    public static String createApproverAccountPayload(){
-        String json= "{\n" +
-                "  \"name\": \"Approver Bot\",\n" +
-                "  \"mobile\":\"1000000001\",\n" +
-                "  \"password\":\"##ofbdevautomation@2016##\",\n" +
-                "  \"email\":\"\"\n" +
-                "}";
-        return json;
-    }
-
-    public static String sendLoginOtpPayload(String randomMobile){
+    @Contract(pure = true)
+    public static @NotNull String sendLoginOtpPayload(String randomMobile){
 
         String json="{\"mobile\":\""+randomMobile+"\"}";
         return json;
     }
 
-    public static String accountCreatePayload(String randomMobile,String clientOtp){
+    @Contract(pure = true)
+    public static @NotNull String accountCreatePayload(String randomMobile, String clientOtp){
         String json = "{\n" +
                 "\t\"profiles\": {\n" +
                 "\t\t\"BUYER\": {\n" +
@@ -48,25 +44,19 @@ public class Payload {
     }
 
     //AdminAuthToken Payloads :
-    public static String adminAuthTokenPayload(){
+    @Contract(pure = true)
+    public static @NotNull String adminAndApproverAdminAuthTokenPayload(String mobile){
         String json="{\n" +
-                "  \"mobile\":\"1000000000\",\n" +
+                "  \"mobile\":\""+mobile+"\",\n" +
                 "  \"password\":\"##ofbdevautomation@2016##\",\n" +
                 "  \"userProfileType\":\"OXYZOAPPLICANT\"\n" +
                 "}";
         return json;
     }
-    public static String approverAdminAuthTokenPayload(){
-        String json = "{\n" +
-                "  \"mobile\":\"1000000001\",\n" +
-                "  \"password\":\"##ofbdevautomation@2016##\",\n" +
-                "  \"userProfileType\":\"OXYZOAPPLICANT\"\n" +
-                "}";
-        return json;
-    }
-    //CreateVerifiedOrganisation Payloads :
 
-    public static String createOrganisationPayload(String randomMobile,String contactName,String organisationName){
+    //CreateVerifiedOrganisation Payloads :
+    @Contract(pure = true)
+    public static @NotNull String createOrganisationPayload(String randomMobile, String contactName, String organisationName){
 
         String json= "{\n" +
                 "    \"contactMobile\": \""+randomMobile+"\",\n" +
@@ -81,7 +71,8 @@ public class Payload {
         return  json;
     }
 
-    public static String saveAddressPayload(String clientOrganisationId,String contactName,String randomMobile){
+    @Contract(pure = true)
+    public static @NotNull String saveAddressPayload(String clientOrganisationId, String contactName, String randomMobile){
         String json = "{\n" +
                 "\"isBillingAddress\":true,\n" +
                 "\"isShippingAddress\":true,\n" +
@@ -113,7 +104,8 @@ public class Payload {
         return json;
     }
 
-    public static String saveGstPayload(String gst){
+    @Contract(pure = true)
+    public static @NotNull String saveGstPayload(String gst){
         String json = "{\n" +
                 "\"vat\":null,\n" +
                 "\"cst\":null,\n" +
@@ -123,7 +115,8 @@ public class Payload {
         return json;
     }
 
-    public static String addAddressWithGstPayload(String gst,String clientOrganisationId){
+    @Contract(pure = true)
+    public static @NotNull String addAddressWithGstPayload(String gst, String clientOrganisationId){
         String json= "{\n" +
                 "    \"addressLine1\": \"Somewhere\",\n" +
                 "    \"addressLine2\": \"in Faridabad\",\n" +
@@ -144,7 +137,8 @@ public class Payload {
         return json;
     }
 
-    public static String verifyAddressPayload(String fingerPrint,String tempFileLoaction){
+    @Contract(pure = true)
+    public static @NotNull String verifyAddressPayload(String fingerPrint, String tempFileLoaction){
         String json = "{\n" +
                 "    \"minCreateDocumentDto\": {\n" +
                 "        \"comment\": \"\",\n" +
@@ -164,7 +158,8 @@ public class Payload {
         return json;
     }
 
-    public static String verifyGstPayload(String fingerPrint,String tempFileLocation){
+    @Contract(pure = true)
+    public static @NotNull String verifyGstPayload(String fingerPrint, String tempFileLocation){
         String json = "{\n" +
                 "    \"minCreateDocumentDto\": {\n" +
                 "        \"fileFingerPrint\": \""+fingerPrint+"\",\n" +
@@ -181,7 +176,8 @@ public class Payload {
         return  json;
     }
 
-    public static String verifyPanPayload(String fingerPrint,String tempFileLocation,String panNumber){
+    @Contract(pure = true)
+    public static @NotNull String verifyPanPayload(String fingerPrint, String tempFileLocation, String panNumber){
         String json = "{\n" +
                 "    \"minCreateDocumentDto\": {\n" +
                 "        \"fileFingerPrint\": \""+fingerPrint+"\",\n" +
@@ -200,16 +196,18 @@ public class Payload {
         return json;
     }
 
-    public static String verifyBranchRegionPayload(){
+    @Contract(pure = true)
+    public static @NotNull String verifyBranchRegionPayload(){
 
         String json = "{}";
         return json;
     }
 
     //Loan Payloads :
-    public static String getCreateLoaAnApplicationPayload(String contactPersonName,String contactPersonEmail,
-                                                         String randomMobile,String clientOrganisationId,
-                                                         String clientName){
+    @Contract(pure = true)
+    public static @NotNull String getCreateLoaAnApplicationPayload(String contactPersonName, String contactPersonEmail,
+                                                                   String randomMobile, String clientOrganisationId,
+                                                                   String clientName){
         String json = "{\n" +
                 "\"loanAmount\":\"1000000\",\n" +
                 "\"contactPersonName\":\""+contactPersonName+"\",\n" +
@@ -222,7 +220,8 @@ public class Payload {
         return json;
     }
 
-    public static String [] addOxyzoSuperAdminPayload(String automationId,String approverId){
+    @Contract(pure = true)
+    public static String @NotNull [] addOxyzoSuperAdminPayload(String automationId, String approverId){
 
         String [] array = new String[2];
         array[0]=automationId;
@@ -231,7 +230,8 @@ public class Payload {
         return array;
     }
 
-    public static String updateLoanApplicationPayload(String clientAppId,String loanType,String clientId){
+    @Contract(pure = true)
+    public static @NotNull String updateLoanApplicationPayload(String clientAppId, String loanType, String clientId){
 
         String json = "{\n" +
                 "\"applicationId\":\""+clientAppId+"\",\n" +
@@ -260,6 +260,22 @@ public class Payload {
                 "\"contactPersonDesignation\":\"\",\n" +
                 "\"remarks\":\"\"\n" +
                 "}";
+        return json;
+    }
+
+    public static String updateSalesAgentPayload(String clientOrganisationId,String accountId){
+
+        String json = "{\n" +
+                "    \"leadId\": \""+clientOrganisationId+"\",\n" +
+                "    \"othersIds\": [\n" +
+                "        \""+accountId+"\"\n" +
+                "    ],\n" +
+                "    \"crmAssigneeId\": \""+accountId+"\",\n" +
+                "    \"callingAgentId\": \""+accountId+"\",\n" +
+                "    \"salesAgentId\": \""+accountId+"\",\n" +
+                "    \"oxyzoSalesAgentId\": \""+accountId+"\"\n" +
+                "}";
+
         return json;
     }
 }

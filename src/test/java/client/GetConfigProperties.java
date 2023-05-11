@@ -10,7 +10,7 @@ public class GetConfigProperties {
     public static void getConfigProperties(){
         prop = new Properties();
         try {
-            FileInputStream fis = new FileInputStream("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\client\\config.properties");
+            FileInputStream fis = new FileInputStream("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\files\\config.properties");
             prop.load(fis);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -53,5 +53,10 @@ public class GetConfigProperties {
     public static String getCIN(){
         getConfigProperties();
         return prop.getProperty("CIN");
+    }
+
+    public static String getAccountId(){
+        getConfigProperties();
+        return prop.getProperty("accountId");
     }
 }

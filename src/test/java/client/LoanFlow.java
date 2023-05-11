@@ -5,16 +5,19 @@ import files.Payload;
 import files.UtilityFunctions;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
-public class LoanFlow {
 
-    @Test
+public class LoanFlow  extends CreateVerifiedOrganisation{
+
+    //Create Organsiation part is executed before LoanFlow :
+
+    //Create new loan application :
+    @Test(priority = 20)
     public static void CreateLoanApplication() throws Exception{
 
         Map<String,String> requestHeaders = new HashMap<>();
@@ -32,16 +35,19 @@ public class LoanFlow {
                     .assertThat().statusCode(200)
                     .extract().response().asString();
 
+        System.out.println(response);
         JsonPath responseJson = UtilityFunctions.rawToJson(response);
         GlobalVariables.loanAmount= responseJson.getString("data.loanAmount");
         GlobalVariables.clientAccountId = responseJson.getString("data.loanLeadId");
         GlobalVariables.clientAppId = responseJson.getString("data.loanApplicationId");
 
         System.out.println("LoanApplicatioId : "+GlobalVariables.clientAppId);
+        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
+        UtilityFunctions.writeToFile(response,methodName);
 
     }
 
-    @Test
+    @Test(priority = 21)
     public static void addOxyzoSuperAdmin() throws Exception{
 
         Map<String ,String> requestHeaders = new HashMap<>();
@@ -50,6 +56,7 @@ public class LoanFlow {
 
         String [] addOxyzoSuperAdminPayload = Payload.addOxyzoSuperAdminPayload(GlobalVariables.automationId,GlobalVariables.approverId);
 
+        
         RestAssured
                 .given()
                     .baseUri(GetConfigProperties.getOxyzoAPI())
@@ -64,24 +71,4 @@ public class LoanFlow {
 
     }
 
-    @Test
-    public static void updateLoanApplication() throws Exception{
-
-        Map<String,String> requestHeaders = new HashMap<>();
-        requestHeaders.put("X-OFB-TOKEN",GlobalVariables.adminAuthToken);
-        requestHeaders.put("Content-Type","application/json");
-        requestHeaders.put("CIN",GetConfigProperties.getCIN());
-
-
-        String response = RestAssured
-                .given()
-                    .headers(requestHeaders)
-                    .body(Payload.updateLoanApplicationPayload(GlobalVariables.clientAppId,"PURCHASE_FINANCING",GlobalVariables.clientOrganisationId))
-                .when()
-                    .patch("api/v1/oxyzo/admin/loanApplication")
-                .then()
-                    .assertThat().statusCode(200)
-                    .extract().response().asString();
-
-    }
 }

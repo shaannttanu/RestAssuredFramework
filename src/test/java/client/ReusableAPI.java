@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ReusableAPIs {
+public class ReusableAPI {
 
     @Test
     public static void tempUplaod() throws Exception{
@@ -20,7 +20,6 @@ public class ReusableAPIs {
         requestHeaders.put("X-OFB-TOKEN", GlobalVariables.adminAuthToken);
 
         File testFile  = new File("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\download.jpg");
-
 
         String tempUploadResponse = RestAssured
                 .given()

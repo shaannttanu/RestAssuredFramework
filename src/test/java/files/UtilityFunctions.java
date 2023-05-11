@@ -13,6 +13,8 @@ import java.nio.file.StandardOpenOption;
 
 
 public class UtilityFunctions {
+
+    //Generate PAN number for new client :
     public static String buildPan(){
 
         String panNumbertext="";
@@ -28,6 +30,7 @@ public class UtilityFunctions {
         return panNumbertext;
     }
 
+    //Generate GST for new client :
     public static String buildGst(String panNumber){
 
         String gstNumber = "06"+panNumber+"1ZC";
@@ -46,25 +49,35 @@ public class UtilityFunctions {
         return randomEmail;
     }
 
+    public static String getCurrentTime(){
+        String currentTime = Long.toString(System.currentTimeMillis());
+        return currentTime;
+    }
+
+    //calculate total runtime of the flow based on start and end time :
+    public static long getRuntime(String startTime,String endTime) {
+        long start = Long.parseLong(startTime);
+        long end = Long.parseLong(endTime);
+        long runtime = end-start;
+        return runtime;
+    }
     public static JsonPath rawToJson(String response){
         JsonPath js=new JsonPath(response);
         return js;
     }
 
+    //writing response to a .txt file :
     public static void writeToFile(String content , String methodName) throws IOException {
 
-        String path = "C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\response.txt";
-
-        try {
-            Files.write(Paths.get(path),String.format("%s response : \n",methodName).getBytes(),StandardOpenOption.APPEND);
-            Files.write(Paths.get(path), content.getBytes(), StandardOpenOption.APPEND);
-            Files.write(Paths.get(path), "\n".getBytes(), StandardOpenOption.APPEND);
-        } catch (IOException e) {
-            System.out.println(e.getStackTrace());
-        }
+            FileWriter fileWriter = new FileWriter("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\response.txt", true);
+            fileWriter.write(methodName+" :\n"+content+"\n");
+            fileWriter.close();
     }
 
+    //erase contents of reponse.txt file before each run :
     public static void eraseFileContents() throws IOException {
-        new PrintWriter("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\response.txt").close();
+            FileWriter fileWriter = new FileWriter("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\response.txt", false);
+            fileWriter.write("");
+            fileWriter.close();
     }
 }

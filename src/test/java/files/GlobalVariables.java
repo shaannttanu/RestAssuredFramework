@@ -39,4 +39,8 @@ public class GlobalVariables {
     public static String clientAccountId;
     public static String clientAppId;
 
+    //time variables :
+    public static String startTime;
+    public static String endTime ;
+
 }
