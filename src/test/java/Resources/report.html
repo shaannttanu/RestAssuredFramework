@@ -1,0 +1,1142 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">May 12, 2023 08:08:09 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Automation and approver account </p>
+            <p class="text-sm">
+              <span>8:08:09 pm</span> / <span>00:00:01:775</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create Automation and approver account </h5>
+<span class='badge badge-success'>05.12.2023 8:08:09 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:11 pm</span>
+<span class='badge badge-default'>00:00:01:775</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to create new automation and approver account</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:11 pm</td>
+        <td>
+          Response : {"data":{"id":1047500,"mundaneDetail":{"dateCreated":1683718492423,"lastModified":1683718492435,"createdBy":"956007258171382102","lastModifiedBy":"956007258171382102"},"accountId":"956007258171382102","name":"Automation Bot","password":"1000:c2a8fb4013c54a92aed31d3da5a4d4079b653bc18ecfb66c:ed94b4c6aec0c676abb046f080baadbd50f72f769a109388","email":"","mobile":"1000000000","namedImage":null,"profiles":{"SUPPLIER":{"type":"supplier","type":"supplier","organizationId":null,"linked":false,"minQty":0.0,"openToBid":false},"ADMIN":{"type":"admin","type":"admin","leadRegions":null,"leadIndustryTypes":null},"OXYZOADMIN":{"type":"oxyzoadmin","type":"oxyzoadmin"},"EMPLOYEE":{"type":"employee","type":"employee"},"OXYZOAPPLICANT":{"type":"oxyzoapplicant","type":"oxyzoapplicant"},"BUYER":{"type":"buyer","type":"buyer","companyName":null,"salesTaxNumber":null,"cinNumber":null,"industryOfOperation":null,"isDealer":null,"others":null,"pincode":null,"cstTin":null,"eccNumber":null,"businessProfile":null,"customerAttributes":{},"customerPreferenceRating":null,"pan":null,"creditLimit":null,"tokenMoneyPercentage":2,"advanceMoneyPercentage":10,"buyerCode":null}},"industryType":"Others","creditInfo":{"creditStatus":"NONE","appliedTime":0,"lastModified":1683718492425,"bankName":null,"organizationType":null,"contactName":null,"contactNumber":null,"companyName":null,"salesPersonName":null,"creditType":null},"roleIds":["791716333237572381"],"businessEntities":["OFB","OXYZO"],"normalizedName":"automation-bot","accountSource":{"accountSourceType":"OASYS_REGISTERED_WEB","source":"OASYS_REGISTERED_WEB"},"blocked":false,"test":false,"itrAckNumList":[],"verified":true,"emailVerified":false,"mobileVerified":true,"itrFiled":false},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:11 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Automation and approver account </p>
+            <p class="text-sm">
+              <span>8:08:12 pm</span> / <span>00:00:00:243</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create Automation and approver account </h5>
+<span class='badge badge-success'>05.12.2023 8:08:12 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:12 pm</span>
+<span class='badge badge-default'>00:00:00:243</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to create new automation and approver account</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:12 pm</td>
+        <td>
+          Response : {"data":{"id":1047501,"mundaneDetail":{"dateCreated":1683718504115,"lastModified":1683718504125,"createdBy":"956007307215378777","lastModifiedBy":"956007307215378777"},"accountId":"956007307215378777","name":"Approver Bot","password":"1000:0f9d8f0aa1016b6f1193e4bcf3118ae6c856f08c94e8cdfb:d73521aa3507e0b717d6dcd645060ee96c0d1d9ac859770e","email":"","mobile":"1000000001","namedImage":null,"profiles":{"SUPPLIER":{"type":"supplier","type":"supplier","organizationId":null,"linked":false,"minQty":0.0,"openToBid":false},"ADMIN":{"type":"admin","type":"admin","leadRegions":null,"leadIndustryTypes":null},"OXYZOADMIN":{"type":"oxyzoadmin","type":"oxyzoadmin"},"EMPLOYEE":{"type":"employee","type":"employee"},"OXYZOAPPLICANT":{"type":"oxyzoapplicant","type":"oxyzoapplicant"},"BUYER":{"type":"buyer","type":"buyer","companyName":null,"salesTaxNumber":null,"cinNumber":null,"industryOfOperation":null,"isDealer":null,"others":null,"pincode":null,"cstTin":null,"eccNumber":null,"businessProfile":null,"customerAttributes":{},"customerPreferenceRating":null,"pan":null,"creditLimit":null,"tokenMoneyPercentage":2,"advanceMoneyPercentage":10,"buyerCode":null}},"industryType":"Others","creditInfo":{"creditStatus":"NONE","appliedTime":0,"lastModified":1683718504117,"bankName":null,"organizationType":null,"contactName":null,"contactNumber":null,"companyName":null,"salesPersonName":null,"creditType":null},"roleIds":["791716333237572381"],"businessEntities":["OFB","OXYZO"],"normalizedName":"approver-bot","accountSource":{"accountSourceType":"OASYS_REGISTERED_WEB","source":"OASYS_REGISTERED_WEB"},"blocked":false,"test":false,"itrAckNumList":[],"verified":true,"emailVerified":false,"mobileVerified":true,"itrFiled":false},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:12 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Token Auth </p>
+            <p class="text-sm">
+              <span>8:08:12 pm</span> / <span>00:00:00:242</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Token Auth </h5>
+<span class='badge badge-success'>05.12.2023 8:08:12 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:12 pm</span>
+<span class='badge badge-default'>00:00:00:242</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to validate auth-token</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:12 pm</td>
+        <td>
+          Response : 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:12 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">GetAdminAuthToken and ApproverAuthToken</p>
+            <p class="text-sm">
+              <span>8:08:12 pm</span> / <span>00:00:00:218</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">GetAdminAuthToken and ApproverAuthToken</h5>
+<span class='badge badge-success'>05.12.2023 8:08:12 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:12 pm</span>
+<span class='badge badge-default'>00:00:00:218</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to genearate new adminAuthToken and ApproverAdminAuthToken </div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:12 pm</td>
+        <td>
+          Response : {"data":{"token":"956778173448592513","industryType":"Others"},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:12 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">GetAdminAuthToken and ApproverAuthToken</p>
+            <p class="text-sm">
+              <span>8:08:12 pm</span> / <span>00:00:00:234</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">GetAdminAuthToken and ApproverAuthToken</h5>
+<span class='badge badge-success'>05.12.2023 8:08:12 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:13 pm</span>
+<span class='badge badge-default'>00:00:00:234</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to genearate new adminAuthToken and ApproverAdminAuthToken </div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:13 pm</td>
+        <td>
+          Response : {"data":{"token":"956778174463614082","industryType":"Others"},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:13 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Send Login Otp</p>
+            <p class="text-sm">
+              <span>8:08:13 pm</span> / <span>00:00:00:243</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Send Login Otp</h5>
+<span class='badge badge-success'>05.12.2023 8:08:13 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:13 pm</span>
+<span class='badge badge-default'>00:00:00:243</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to send OTP to login</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:13 pm</td>
+        <td>
+          Response : {"data":"OTP Sent","success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:13 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get OTP</p>
+            <p class="text-sm">
+              <span>8:08:13 pm</span> / <span>00:00:00:200</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get OTP</h5>
+<span class='badge badge-success'>05.12.2023 8:08:13 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:13 pm</span>
+<span class='badge badge-default'>00:00:00:200</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to fetch OTP</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:13 pm</td>
+        <td>
+          Response : {"data":"775914","success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:13 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create New Account </p>
+            <p class="text-sm">
+              <span>8:08:13 pm</span> / <span>00:00:01:609</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create New Account </h5>
+<span class='badge badge-success'>05.12.2023 8:08:13 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:15 pm</span>
+<span class='badge badge-default'>00:00:01:609</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:15 pm</td>
+        <td>
+          Response : {"data":{"minOrganisationInfoSet":[{"organisationId":"956034255555663744","leadId":"956034255555663744","organisationName":"Liv Stöckert","pan":"RYFFO6290B","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956034292562007976","partyId":"956034255555663744","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956034255626966913","partyId":"956034255555663744","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956034318604441515","partyId":"956034255555663744","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956034491728533464","partyId":"956034255555663744","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"809534125579967564","leadId":"809534125579967564","organisationName":"9718415454","pan":null,"salesPersonAccount":null,"addresses":[{"addressId":"809534125609327693","partyId":"809534125579967564","addressLine1":null,"addressLine2":null,"city":null,"state":null,"latitude":0.0,"longitude":0.0,"pinCode":null}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956285845168461102","leadId":"956285845168461102","organisationName":"Beatty, McLaughlin and Towne","pan":"FJLPH2419H","salesPersonAccount":null,"addresses":[{"addressId":"956285845407536431","partyId":"956285845168461102","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956285857038341435","partyId":"956285845168461102","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956285848028976441","partyId":"956285845168461102","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956701262722634971","leadId":"956701262722634971","organisationName":"Raul Hesse","pan":null,"salesPersonAccount":null,"addresses":[{"addressId":"956701263041402076","partyId":"956701262722634971","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956090885609627628","leadId":"956090885609627628","organisationName":"Prof. Dr. Mieke Rhoden","pan":"TCFBK8754I","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956090911119380516","partyId":"956090885609627628","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956090886226190317","partyId":"956090885609627628","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956090891250962432","partyId":"956090885609627628","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956090956740825156","partyId":"956090885609627628","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956090891242577919","partyId":"956090885609627628","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956090921131184167","partyId":"956090885609627628","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNG6K2"},{"organisationId":"956029659248595892","leadId":"956029659248595892","organisationName":"Maggio-Lind","pan":"GGQLH3693D","salesPersonAccount":null,"addresses":[{"addressId":"956029666584433601","partyId":"956029659248595892","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956029661266056127","partyId":"956029659248595892","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956029659315704757","partyId":"956029659248595892","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956720391907186297","leadId":"956720391907186297","organisationName":"Purdy Inc","pan":"WGEID1259Q","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956720395505899140","partyId":"956720391907186297","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956720436350031517","partyId":"956720391907186297","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956720392590857850","partyId":"956720391907186297","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956720436354225822","partyId":"956720391907186297","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956720401730246278","partyId":"956720391907186297","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956088054378928271","leadId":"956088054378928271","organisationName":"Ibrahim Fahner","pan":"KYNAT8287D","salesPersonAccount":{"accountId":"757332709772105879","name":"Anurag Dawar","email":"anurag.dawar@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956088056056649883","partyId":"956088054378928271","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956088072674482335","partyId":"956088054378928271","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956088054550894736","partyId":"956088054378928271","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNPQ99"},{"organisationId":"956080158001860666","leadId":"956080158001860666","organisationName":"Semih Waibel","pan":"LDDIE1637M","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956080160241619013","partyId":"956080158001860666","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956080177861890120","partyId":"956080158001860666","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956080158500982843","partyId":"956080158001860666","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN7S40"},{"organisationId":"956777972990221396","leadId":"956777972990221396","organisationName":"Yves Kinzy Testing Company","pan":"COKAR0948B","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956777973577423957","partyId":"956777972990221396","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956778012777389153","partyId":"956777972990221396","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956777975263534170","partyId":"956777972990221396","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"759898611449336284","leadId":"759898611449336284","organisationName":null,"pan":null,"salesPersonAccount":null,"addresses":[],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956732864861312986","leadId":"956732864861312986","organisationName":"Beier, Harvey and Welch","pan":"RCISU2199M","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956732872679495652","partyId":"956732864861312986","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956732866392233947","partyId":"956732864861312986","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956732880250214375","partyId":"956732864861312986","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956734572555409516","leadId":"956734572555409516","organisationName":"Rutherford, Powlowski and Marks","pan":"FYQPF8961N","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956734582269417593","partyId":"956734572555409516","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956734572932896877","partyId":"956734572555409516","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956734611545659527","partyId":"956734572555409516","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956734611537270918","partyId":"956734572555409516","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956734576074430583","partyId":"956734572555409516","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956077665612208118","leadId":"956077665612208118","organisationName":"Ahmet Erlei Testing Company","pan":"CXXMR1836Y","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956077672142739473","partyId":"956077665612208118","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956077695374989357","partyId":"956077665612208118","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956077743089391694","partyId":"956077665612208118","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956077706003355697","partyId":"956077665612208118","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956077672146933778","partyId":"956077665612208118","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956077666128107511","partyId":"956077665612208118","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNX5RS"},{"organisationId":"956646607334416099","leadId":"956646607334416099","organisationName":"Tremblay, Flatley and Brown Testing Company","pan":null,"salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956646607619628772","partyId":"956646607334416099","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956646611298033390","partyId":"956646607334416099","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956105251935491047","leadId":"956105251935491047","organisationName":"Padberg-Flatley","pan":"YXAFS5386T","salesPersonAccount":null,"addresses":[{"addressId":"956105254275912691","partyId":"956105251935491047","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956105252141011945","partyId":"956105251935491047","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956105259900474357","partyId":"956105251935491047","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956086062130667317","leadId":"956086062130667317","organisationName":"Emely Bussmann I Testing Company","pan":"FHAKF9250E","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956086069831409490","partyId":"956086062130667317","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956086062625595190","partyId":"956086062130667317","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956086069827215185","partyId":"956086062130667317","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956086157362335799","partyId":"956086062130667317","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956086108666470270","partyId":"956086062130667317","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956086093344677746","partyId":"956086062130667317","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNVHRW"},{"organisationId":"956093477270067518","leadId":"956093477270067518","organisationName":"Teo Hiller Test Supplier","pan":"IFITB1097I","salesPersonAccount":null,"addresses":[{"addressId":"956093498694572363","partyId":"956093477270067518","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956093479765678409","partyId":"956093477270067518","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956093477622389055","partyId":"956093477270067518","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956087348146214376","leadId":"956087348146214376","organisationName":"Fr. Sydney Reuber Testing Company","pan":"RCMJQ9731P","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956087354156652031","partyId":"956087348146214376","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956087426655196737","partyId":"956087348146214376","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956087374251562541","partyId":"956087348146214376","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956087348733416937","partyId":"956087348146214376","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956087354160846336","partyId":"956087348146214376","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956087385651680817","partyId":"956087348146214376","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN7QRE"},{"organisationId":"956073343784591077","leadId":"956073343784591077","organisationName":"Azra Dolch Testing Company","pan":"WQVHJ8140T","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956073344241770214","partyId":"956073343784591077","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956073349006499585","partyId":"956073343784591077","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956073373199245098","partyId":"956073343784591077","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956073389435395886","partyId":"956073343784591077","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956073349002305280","partyId":"956073343784591077","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956073430245973835","partyId":"956073343784591077","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN5U76"},{"organisationId":"956034983447763190","leadId":"956034983447763190","organisationName":"Carroll Group","pan":"ZMYOX7409F","salesPersonAccount":null,"addresses":[{"addressId":"956034990557108483","partyId":"956034983447763190","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956034985574275329","partyId":"956034983447763190","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956034983514872055","partyId":"956034983447763190","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956073099655126695","leadId":"956073099655126695","organisationName":"Nikolai Ender Testing Company","pan":null,"salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956073099768372904","partyId":"956073099655126695","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956073105053195970","partyId":"956073099655126695","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956073105061584579","partyId":"956073099655126695","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956017834217971292","leadId":"956017834217971292","organisationName":"Cartwright and Sons","pan":"ZHURI4001H","salesPersonAccount":null,"addresses":[{"addressId":"956017834280885853","partyId":"956017834217971292","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956017847039958637","partyId":"956017834217971292","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956017842086485609","partyId":"956017834217971292","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956092126335079582","leadId":"956092126335079582","organisationName":"Esma Tschirch","pan":"HCFZI0499G","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956092126788064415","partyId":"956092126335079582","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956092132223882421","partyId":"956092126335079582","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956092132228076726","partyId":"956092126335079582","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956092163412727013","partyId":"956092126335079582","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956092156861224163","partyId":"956092126335079582","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956092211638834436","partyId":"956092126335079582","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNANVY"},{"organisationId":"956084947758618836","leadId":"956084947758618836","organisationName":"Samuel Platzer Testing Company","pan":"OIGAL5439Z","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956084985343777202","partyId":"956084947758618836","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956084977135524204","partyId":"956084947758618836","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956084953857136878","partyId":"956084947758618836","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956085030398990811","partyId":"956084947758618836","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956084953848748269","partyId":"956084947758618836","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956084947909613781","partyId":"956084947758618836","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN7V1B"},{"organisationId":"956076285661025159","leadId":"956076285661025159","organisationName":"Lia Schönlebe I Testing Company","pan":"YXODU6347Y","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956076364983702509","partyId":"956076285661025159","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956076316736623565","partyId":"956076285661025159","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956076292321579940","partyId":"956076285661025159","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956076292317385635","partyId":"956076285661025159","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956076286147564424","partyId":"956076285661025159","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956076327398544336","partyId":"956076285661025159","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN7935"},{"organisationId":"956733202616031282","leadId":"956733202616031282","organisationName":"Benjamin Waibel Testing Company","pan":"FIZQH2584O","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956733203069016115","partyId":"956733202616031282","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956733205036144696","partyId":"956733202616031282","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956733242680023104","partyId":"956733202616031282","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956356880194607564","leadId":"956356880194607564","organisationName":"Felicia Hugo I Testing Company","pan":"MYWXG5407U","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956356920598338010","partyId":"956356880194607564","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956356880635009485","partyId":"956356880194607564","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956356882837019090","partyId":"956356880194607564","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956298007337244139","leadId":"956298007337244139","organisationName":"Leannon, Langosh and Strosin","pan":"GWFUO2795P","salesPersonAccount":null,"addresses":[{"addressId":"956298007580513772","partyId":"956298007337244139","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956298016019453432","partyId":"956298007337244139","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956298010323588598","partyId":"956298007337244139","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956016772446690543","leadId":"956016772446690543","organisationName":"Stoltenberg Group","pan":"TUHDB1413R","salesPersonAccount":null,"addresses":[{"addressId":"956016772513799408","partyId":"956016772446690543","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956016781317643520","partyId":"956016772446690543","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956016774619340026","partyId":"956016772446690543","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956083872762697368","leadId":"956083872762697368","organisationName":"Joy Buss Testing Company","pan":"SMXPX9987J","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956083892299765413","partyId":"956083872762697368","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956083873232459417","partyId":"956083872762697368","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956083874662717091","partyId":"956083872762697368","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNGZG1"},{"organisationId":"956078726154558592","leadId":"956078726154558592","organisationName":"Amelia Vieweg Testing Company","pan":"BTJWA9051K","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956078726469131393","partyId":"956078726154558592","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956078742793362585","partyId":"956078726154558592","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956078761411878044","partyId":"956078726154558592","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNCSM4"},{"organisationId":"956039992222684995","leadId":"956039992222684995","organisationName":"Arwen Werner Testing Company","pan":"QNCJZ0629B","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956040056202598254","partyId":"956039992222684995","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956040230438180765","partyId":"956039992222684995","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956039992323348292","partyId":"956039992222684995","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956040030080472938","partyId":"956039992222684995","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNREEX"},{"organisationId":"956038142559785500","leadId":"956038142559785500","organisationName":"Mike Zimmer","pan":"FYQYG4411Z","salesPersonAccount":{"accountId":"757332709772105879","name":"Anurag Dawar","email":"anurag.dawar@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956038143616750120","partyId":"956038142559785500","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956038142647865885","partyId":"956038142559785500","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956038179633238570","partyId":"956038142559785500","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN9451"},{"organisationId":"956089884580257437","leadId":"956089884580257437","organisationName":"Lotta Gamlin","pan":"SRIPQ2128H","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956089960467799797","partyId":"956089884580257437","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956089884982910622","partyId":"956089884580257437","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956089920475111128","partyId":"956089884580257437","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956089891144343219","partyId":"956089884580257437","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956089910803046101","partyId":"956089884580257437","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956089891140148914","partyId":"956089884580257437","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956081670048453008","leadId":"956081670048453008","organisationName":"Levke Poehn Jr. Testing Company","pan":"GEXMT9889L","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956081672153993627","partyId":"956081670048453008","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956081689673601438","partyId":"956081670048453008","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956081670665015697","partyId":"956081670048453008","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNUKAR"},{"organisationId":"956095683146816165","leadId":"956095683146816165","organisationName":"Alan Montag Test Supplier","pan":"NOKXK5576X","salesPersonAccount":null,"addresses":[{"addressId":"956095702990068403","partyId":"956095683146816165","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956095685373991600","partyId":"956095683146816165","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956095683608189606","partyId":"956095683146816165","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956386435055754433","leadId":"956386435055754433","organisationName":"Tromp-Hettinger","pan":"MIVGA7886E","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956386451610672334","partyId":"956386435055754433","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956386444501327052","partyId":"956386435055754433","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956386435550682306","partyId":"956386435055754433","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956660994531135681","leadId":"956660994531135681","organisationName":"Tara Betz Testing Company","pan":"LYFRP7914R","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956661018866487537","partyId":"956660994531135681","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956661030778310900","partyId":"956660994531135681","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956661002827469008","partyId":"956660994531135681","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956661002835857617","partyId":"956660994531135681","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956660994824736962","partyId":"956660994531135681","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956099562584413105","leadId":"956099562584413105","organisationName":"Smitham, Weimann and Johns","pan":"TLOPS6763H","salesPersonAccount":null,"addresses":[{"addressId":"956099563230335922","partyId":"956099562584413105","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956099571061101502","partyId":"956099562584413105","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956099565730141116","partyId":"956099562584413105","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956747043399801572","leadId":"956747043399801572","organisationName":"Morissette-Mills","pan":"VZRFQ2263G","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956747046516169455","partyId":"956747043399801572","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956747112282856205","partyId":"956747043399801572","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956747057471691505","partyId":"956747043399801572","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956747112287050510","partyId":"956747043399801572","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956747043777288933","partyId":"956747043399801572","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956638754636832238","leadId":"956638754636832238","organisationName":"Shields LLC Testing Company","pan":null,"salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956638762115276276","partyId":"956638754636832238","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956638756398439919","partyId":"956638754636832238","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956378496601431043","leadId":"956378496601431043","organisationName":"Buckridge, Powlowski and Moore","pan":"ELNWI4791Z","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956378500179172366","partyId":"956378496601431043","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956378534471801892","partyId":"956378496601431043","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956378534467607587","partyId":"956378496601431043","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956378505791151121","partyId":"956378496601431043","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956378497469651972","partyId":"956378496601431043","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956739084087204143","leadId":"956739084087204143","organisationName":"Douglas, Borer and Monahan","pan":"WCLPY7277Z","salesPersonAccount":null,"addresses":[{"addressId":"956739123123591502","partyId":"956739084087204143","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956739087488784698","partyId":"956739084087204143","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956739093922847037","partyId":"956739084087204143","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956739084515023152","partyId":"956739084087204143","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956739123115202893","partyId":"956739084087204143","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956751001627401086","leadId":"956751001627401086","organisationName":"Frami-Gutkowski","pan":"SXNQI1668R","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956751002009082751","partyId":"956751001627401086","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956751005544881034","partyId":"956751001627401086","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956751043817905053","partyId":"956751001627401086","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956751043809516444","partyId":"956751001627401086","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956751012180269964","partyId":"956751001627401086","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956093534891415902","leadId":"956093534891415902","organisationName":"Danilo Rahn DDS Test Supplier","pan":"UIWBZ2406L","salesPersonAccount":null,"addresses":[{"addressId":"956093536833378669","partyId":"956093534891415902","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956093553346353534","partyId":"956093534891415902","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956093535356983647","partyId":"956093534891415902","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956016420779465752","leadId":"956016420779465752","organisationName":"Jona Riekmann Testing Company","pan":"CQSAJ4279T","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956016421467331609","partyId":"956016420779465752","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956016463150324795","partyId":"956016420779465752","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956016424990546980","partyId":"956016420779465752","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956019462178345751","leadId":"956019462178345751","organisationName":"Heaney, O'Conner and Rempel","pan":"VUOUV4511R","salesPersonAccount":null,"addresses":[{"addressId":"956019468729848612","partyId":"956019462178345751","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956019462241260312","partyId":"956019462178345751","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956019464036422434","partyId":"956019462178345751","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956284612567373073","leadId":"956284612567373073","organisationName":"Yost-O'Kon","pan":"HKSQU2339V","salesPersonAccount":null,"addresses":[{"addressId":"956284613045523730","partyId":"956284612567373073","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956284624437253404","partyId":"956284612567373073","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956284638693692702","partyId":"956284612567373073","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956650039990558492","leadId":"956650039990558492","organisationName":"Cummings Group","pan":"PZKSW4940A","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956650079106637629","partyId":"956650039990558492","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956650079102443324","partyId":"956650039990558492","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956650042842685223","partyId":"956650039990558492","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956650040305131293","partyId":"956650039990558492","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956650048853122857","partyId":"956650039990558492","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956641912935161433","leadId":"956641912935161433","organisationName":"Tim Ostendarp Jr. Testing Company","pan":"SEMQJ7355E","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956641913392340570","partyId":"956641912935161433","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956641953242422887","partyId":"956641912935161433","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956641915242028639","partyId":"956641912935161433","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956037487866679337","leadId":"956037487866679337","organisationName":"Fr. Joey Eisenlauer","pan":"TOXCU8494D","salesPersonAccount":{"accountId":"757332709772105879","name":"Anurag Dawar","email":"anurag.dawar@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956037524852052023","partyId":"956037487866679337","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956037487950565418","partyId":"956037487866679337","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956037488881700916","partyId":"956037487866679337","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNS47U"},{"organisationId":"956359026398993011","leadId":"956359026398993011","organisationName":"Wunsch-Hoeger","pan":"VPTTF1829Q","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956359035353832064","partyId":"956359026398993011","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956359026877143668","partyId":"956359026398993011","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956359029129484926","partyId":"956359026398993011","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956039854968280841","leadId":"956039854968280841","organisationName":"Matthias Hütter Testing Company","pan":"XYIJL2948H","salesPersonAccount":null,"addresses":[{"addressId":"956039855081527050","partyId":"956039854968280841","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956039884563289883","partyId":"956039854968280841","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956039858411804438","partyId":"956039854968280841","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956666375533760969","leadId":"956666375533760969","organisationName":"Stiedemann, Bauch and Lind","pan":null,"salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956666379111502288","partyId":"956666375533760969","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956666411248259556","partyId":"956666375533760969","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956666411239870947","partyId":"956666375533760969","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956666375978357194","partyId":"956666375533760969","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956036439114521898","leadId":"956036439114521898","organisationName":"Melis Malkus Testing Company","pan":"KWWBK4179K","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956036502905691477","partyId":"956036439114521898","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956036439219379499","partyId":"956036439114521898","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956036682224770421","partyId":"956036439114521898","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956036476833897810","partyId":"956036439114521898","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNFWJR"},{"organisationId":"956281085094794411","leadId":"956281085094794411","organisationName":"Melike Spitzmüller Testing Company","pan":"QFOUD9154E","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956281089016468663","partyId":"956281085094794411","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956281085338064044","partyId":"956281085094794411","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956281126144447673","partyId":"956281085094794411","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956032827256738840","leadId":"956032827256738840","organisationName":"Liliana Mues","pan":"SUFXU0999V","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956032892188759106","partyId":"956032827256738840","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956033071826605167","partyId":"956032827256738840","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956032868906177600","partyId":"956032827256738840","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956032827323847705","partyId":"956032827256738840","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN5AEF"},{"organisationId":"956660150431649839","leadId":"956660150431649839","organisationName":"Dorian Noack","pan":"CFHGN1880J","salesPersonAccount":null,"addresses":[{"addressId":"956660150712668208","partyId":"956660150431649839","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956660167666044988","partyId":"956660150431649839","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956660152491053109","partyId":"956660150431649839","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956280653094065288","leadId":"956280653094065288","organisationName":"Nicolas-Brekke","pan":null,"salesPersonAccount":null,"addresses":[{"addressId":"956280660983551123","partyId":"956280653094065288","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956280654553683081","partyId":"956280653094065288","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956712216323691944","leadId":"956712216323691944","organisationName":"Howe-Metz","pan":"ZKHYJ7212I","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956712226507462069","partyId":"956712216323691944","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956712257536923084","partyId":"956712216323691944","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956712216676013481","partyId":"956712216323691944","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956712257545311693","partyId":"956712216323691944","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956712219624609203","partyId":"956712216323691944","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956041733035007466","leadId":"956041733035007466","organisationName":"AIIXUXE Enterprises","pan":"YFHAL1813F","salesPersonAccount":null,"addresses":[{"addressId":"956041734989553136","partyId":"956041733035007466","addressLine1":"addressLine1","addressLine2":"addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956041740010135026","partyId":"956041733035007466","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956039573123634465","leadId":"956039573123634465","organisationName":"Dr. Julienne Krippner Testing Company","pan":"JHSGQ2986L","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956039664249083338","partyId":"956039573123634465","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956039593205962092","partyId":"956039573123634465","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956039573228492066","partyId":"956039573123634465","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956039577842226507","partyId":"956039573123634465","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956039603884660086","partyId":"956039573123634465","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956039577838032202","partyId":"956039573123634465","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956097606847569757","leadId":"956097606847569757","organisationName":"Juliana Schwarzkopf Test Organisation","pan":"MSEUW2886I","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956097609368346472","partyId":"956097606847569757","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956097607531241310","partyId":"956097606847569757","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956097626879565675","partyId":"956097606847569757","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN43QU"},{"organisationId":"956327589826271163","leadId":"956327589826271163","organisationName":"Schneider, Yost and Stamm","pan":"FWULW6727D","salesPersonAccount":null,"addresses":[{"addressId":"956327598810470344","partyId":"956327589826271163","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956327593185908678","partyId":"956327589826271163","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956327590463805372","partyId":"956327589826271163","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956348685623498989","leadId":"956348685623498989","organisationName":"Koszewski KG Testing Company","pan":"VJIEP8295U","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956371537580006325","partyId":"956348685623498989","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956348686000986350","partyId":"956348685623498989","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956371488552786812","partyId":"956348685623498989","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956386853563407596","partyId":"956348685623498989","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956386853567601901","partyId":"956348685623498989","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956371537592589238","partyId":"956348685623498989","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956371488544398203","partyId":"956348685623498989","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956088683641969770","leadId":"956088683641969770","organisationName":"Neo Erlei Testing Company","pan":"ZVVVB4206L","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956088703808183416","partyId":"956088683641969770","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956088684443081835","partyId":"956088683641969770","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956088686452153462","partyId":"956088683641969770","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNTSQE"},{"organisationId":"956288369652929881","leadId":"956288369652929881","organisationName":"Larkin-Rodriguez","pan":"KCTAZ4586M","salesPersonAccount":null,"addresses":[{"addressId":"956288372505056612","partyId":"956288369652929881","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956288378892981606","partyId":"956288369652929881","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956288369883616602","partyId":"956288369652929881","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956283896201221362","leadId":"956283896201221362","organisationName":"Stroman-Robel","pan":"HJRAK8922R","salesPersonAccount":null,"addresses":[{"addressId":"956283909690103039","partyId":"956283896201221362","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956283899216925949","partyId":"956283896201221362","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956283896494822643","partyId":"956283896201221362","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956084890376345743","leadId":"956084890376345743","organisationName":"Constantin Wölpert Testing Company","pan":"XJFHP7909C","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956084890745444496","partyId":"956084890376345743","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956084896118347942","partyId":"956084890376345743","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956084923414878410","partyId":"956084890376345743","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956084913851865287","partyId":"956084890376345743","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956084962228967700","partyId":"956084890376345743","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956084896122542247","partyId":"956084890376345743","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNCYQJ"},{"organisationId":"956658123911733197","leadId":"956658123911733197","organisationName":"Sawayn-Gislason","pan":"KCAJV8544G","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956658163971530734","partyId":"956658123911733197","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956658132803657691","partyId":"956658123911733197","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956658126843551705","partyId":"956658123911733197","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956658163967336429","partyId":"956658123911733197","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956658124217917390","partyId":"956658123911733197","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956696035957150715","leadId":"956696035957150715","organisationName":"Rohan-Dooley","pan":"ASRYO9734I","salesPersonAccount":null,"addresses":[{"addressId":"956696046765872137","partyId":"956696035957150715","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956696036598879228","partyId":"956696035957150715","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956696039799133190","partyId":"956696035957150715","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956698717610578991","leadId":"956698717610578991","organisationName":"Dibbert-Yundt","pan":"XWMYX4558P","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956698758773478479","partyId":"956698717610578991","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956698727131649085","partyId":"956698717610578991","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956698758781867088","partyId":"956698717610578991","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956698717929346096","partyId":"956698717610578991","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956698720756307002","partyId":"956698717610578991","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956087984468269149","leadId":"956087984468269149","organisationName":"Lucas Kölotzei Testing Company","pan":"EYJNJ3834D","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956087987081320552","partyId":"956087984468269149","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956088006211541098","partyId":"956087984468269149","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956087985076443230","partyId":"956087984468269149","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN8ERH"},{"organisationId":"956723898970281714","leadId":"956723898970281714","organisationName":"Lang, Koch and Gibson Testing Company","pan":"ZKJLW6724B","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956723899368740595","partyId":"956723898970281714","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956723905425315583","partyId":"956723898970281714","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956723901625276157","partyId":"956723898970281714","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956038772368086018","leadId":"956038772368086018","organisationName":"Neo Lischka DDS Test Organisation","pan":"ODMAR6772F","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956038772456166403","partyId":"956038772368086018","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956038809399596047","partyId":"956038772368086018","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956038773416662029","partyId":"956038772368086018","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956662537225507146","leadId":"956662537225507146","organisationName":"Hennes Freisen","pan":null,"salesPersonAccount":null,"addresses":[{"addressId":"956662537967898955","partyId":"956662537225507146","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956314210780845806","leadId":"956314210780845806","organisationName":"Weimann-Grady","pan":"WGFCC7286I","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956314220826203900","partyId":"956314210780845806","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956314214325032697","partyId":"956314210780845806","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956314211380631279","partyId":"956314210780845806","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956699918003606662","leadId":"956699918003606662","organisationName":"Mayer-Maggio","pan":"FZBNN8070S","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956699964958839975","partyId":"956699918003606662","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956699921740731537","partyId":"956699918003606662","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956699918813107335","partyId":"956699918003606662","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956699932855637139","partyId":"956699918003606662","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956699964954645670","partyId":"956699918003606662","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956742780737034693","leadId":"956742780737034693","organisationName":"Powlowski Group","pan":"KYLBE6883Z","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956742781101939142","partyId":"956742780737034693","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956742831261620715","partyId":"956742780737034693","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956742791587699155","partyId":"956742780737034693","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956742831253232106","partyId":"956742780737034693","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956742784906172881","partyId":"956742780737034693","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956663005372748131","leadId":"956663005372748131","organisationName":"Daniel LLC","pan":null,"salesPersonAccount":null,"addresses":[{"addressId":"956663005821538660","partyId":"956663005372748131","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956663008635916654","partyId":"956663005372748131","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956083589626205736","leadId":"956083589626205736","organisationName":"Leana Kleiss Testing Company","pan":"BFYNK0183F","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956083591509448243","partyId":"956083589626205736","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956083608341190197","partyId":"956083589626205736","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956083590091773481","partyId":"956083589626205736","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956039124207277119","leadId":"956039124207277119","organisationName":"Tristan Gromisch Testing Company","pan":"ZNPFY3107B","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956039124299551808","partyId":"956039124207277119","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956039174413096027","partyId":"956039124207277119","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956039138560185432","partyId":"956039124207277119","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNCETH"},{"organisationId":"956746562585762367","leadId":"956746562585762367","organisationName":"Cruickshank Inc","pan":"SGLXY5152K","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956746607129270892","partyId":"956746562585762367","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956746607120882283","partyId":"956746562585762367","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956746573952326221","partyId":"956746562585762367","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956746565937011274","partyId":"956746562585762367","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956746562963249728","partyId":"956746562585762367","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956725076579850071","leadId":"956725076579850071","organisationName":"Hartmann-Douglas","pan":"RVKUZ6178B","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956725115461048188","partyId":"956725076579850071","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956725086079948644","partyId":"956725076579850071","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956725080203728738","partyId":"956725076579850071","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956725115452659579","partyId":"956725076579850071","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956725077343213400","partyId":"956725076579850071","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956357492961450518","leadId":"956357492961450518","organisationName":"Stamm and Sons","pan":"MPHEO4630Q","salesPersonAccount":null,"addresses":[{"addressId":"956357495947794977","partyId":"956357492961450518","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956357502243445283","partyId":"956357492961450518","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956357493238274583","partyId":"956357492961450518","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956035276935797021","leadId":"956035276935797021","organisationName":"Koss-Swift","pan":"RLVCL6375C","salesPersonAccount":null,"addresses":[{"addressId":"956035277015488798","partyId":"956035276935797021","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956035279179749672","partyId":"956035276935797021","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956035284225497386","partyId":"956035276935797021","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956079647974497885","leadId":"956079647974497885","organisationName":"Hugo Esser Testing Company","pan":"EMIAD2730Y","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956079681633787513","partyId":"956079647974497885","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956079663732498038","partyId":"956079647974497885","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956079648553311838","partyId":"956079647974497885","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNC5S7"},{"organisationId":"956724206295324451","leadId":"956724206295324451","organisationName":"Mosciski, Kozey and Will Testing Company","pan":"XVYTI1078D","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956724212855215920","partyId":"956724206295324451","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956724208824489774","partyId":"956724206295324451","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956724206630868772","partyId":"956724206295324451","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956040347761252484","leadId":"956040347761252484","organisationName":"Eliah Reppin Testing Company","pan":"QQGEO1573C","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956040455726831862","partyId":"956040347761252484","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956040379575048382","partyId":"956040347761252484","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956040409925032138","partyId":"956040347761252484","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956040362445510811","partyId":"956040347761252484","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956040362449705117","partyId":"956040347761252484","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956040347861915781","partyId":"956040347761252484","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNP0DC"},{"organisationId":"956338650700847202","leadId":"956338650700847202","organisationName":"Abernathy, Kovacek and Wisoky","pan":"KOMUY1221W","salesPersonAccount":null,"addresses":[{"addressId":"956338650935728227","partyId":"956338650700847202","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956338653641054317","partyId":"956338650700847202","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956338660620376175","partyId":"956338650700847202","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956086048834723583","leadId":"956086048834723583","organisationName":"Eric Unterpaintner Testing Company","pan":"HZSKB4043K","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956086122151157636","partyId":"956086048834723583","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956086049161879296","partyId":"956086048834723583","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956086054484451091","partyId":"956086048834723583","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956086072448655211","partyId":"956086048834723583","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956086054480256786","partyId":"956086048834723583","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956086082217189231","partyId":"956086048834723583","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNB33W"},{"organisationId":"956358534184835660","leadId":"956358534184835660","organisationName":"Dibbert, Parker and Rau","pan":"GOKYC5859X","salesPersonAccount":null,"addresses":[{"addressId":"956358534994336333","partyId":"956358534184835660","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956358537934543448","partyId":"956358534184835660","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956358544095976026","partyId":"956358534184835660","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956660712195756111","leadId":"956660712195756111","organisationName":"Jenna Koehl MD Testing Company","pan":"VAEVL0179L","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956660721939124323","partyId":"956660712195756111","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956660739580366975","partyId":"956660712195756111","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956660806437572754","partyId":"956660712195756111","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956660751714488450","partyId":"956660712195756111","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956660712497746000","partyId":"956660712195756111","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956660721934930018","partyId":"956660712195756111","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956035423409281389","leadId":"956035423409281389","organisationName":"Prof. Dr. Karina Mordhorst Testing Company","pan":"RRTYM2138K","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956035423488973166","partyId":"956035423409281389","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956035485900216745","partyId":"956035423409281389","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956035664434960843","partyId":"956035423409281389","addressLine1":"qwerty","addressLine2":null,"city":"Gautam Buddha Nagar","state":"Uttar Pradesh","latitude":0.0,"longitude":0.0,"pinCode":"201310"},{"addressId":"956035459908114854","partyId":"956035423409281389","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBND0FV"},{"organisationId":"956083084493591659","leadId":"956083084493591659","organisationName":"Fr. Emil Dittmer Testing Company","pan":"JICAP2273R","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956083109298705527","partyId":"956083084493591659","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956083084971742316","partyId":"956083084493591659","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956083128068215929","partyId":"956083084493591659","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBNHB7W"},{"organisationId":"956777760796187684","leadId":"956777760796187684","organisationName":"Gutkowski and Sons Testing Company","pan":"QZIPO1034S","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956777768459181106","partyId":"956777760796187684","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956777763992247344","partyId":"956777760796187684","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956777761244978213","partyId":"956777760796187684","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956016639646637215","leadId":"956016639646637215","organisationName":"Luettgen-Breitenberg","pan":null,"salesPersonAccount":null,"addresses":[{"addressId":"956016641802509484","partyId":"956016639646637215","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956016639705357472","partyId":"956016639646637215","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956374589573700546","leadId":"956374589573700546","organisationName":"Turner-Dach","pan":"CXOLG1065G","salesPersonAccount":null,"addresses":[{"addressId":"956374589850524611","partyId":"956374589573700546","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956374592912366541","partyId":"956374589573700546","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956374598566288335","partyId":"956374589573700546","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956081057180946664","leadId":"956081057180946664","organisationName":"Ines Abramovic Testing Company","pan":"GKWET4359L","salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956081076407636213","partyId":"956081057180946664","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956081057466159337","partyId":"956081057180946664","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956081058959331571","partyId":"956081057180946664","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":"OFBN5YAN"},{"organisationId":"956640712126897699","leadId":"956640712126897699","organisationName":"Murphy, Rippin and Klocko Testing Company","pan":null,"salesPersonAccount":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"addresses":[{"addressId":"956640715603975726","partyId":"956640712126897699","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956640713058033188","partyId":"956640712126897699","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":false,"referralCode":null},{"organisationId":"956370175022603081","leadId":"956370175022603081","organisationName":"Ankunding Inc","pan":"JMYHH7643R","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956370184031968086","partyId":"956370175022603081","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956370177996364628","partyId":"956370175022603081","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956374625921539035","partyId":"956370175022603081","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956374625917344730","partyId":"956370175022603081","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956370175278455626","partyId":"956370175022603081","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956642555888410264","leadId":"956642555888410264","organisationName":"Jacobi-Hickle","pan":"AOFQL3935L","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956642604110323385","partyId":"956642555888410264","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956642556173622937","partyId":"956642555888410264","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956642604101934776","partyId":"956642555888410264","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956642558560181923","partyId":"956642555888410264","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956642570128072358","partyId":"956642555888410264","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956662296556343598","leadId":"956662296556343598","organisationName":"Davide Zeidler Sr.","pan":"VJIEP8295U","salesPersonAccount":null,"addresses":[{"addressId":"956662296904470831","partyId":"956662296556343598","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956662315522986299","partyId":"956662296556343598","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956662298728993076","partyId":"956662296556343598","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956650570456768354","leadId":"956650570456768354","organisationName":"Klein, Wehner and Jacobs","pan":"QSNTN9005X","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956650570792312675","partyId":"956650570456768354","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956650573258563437","partyId":"956650570456768354","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956650609874837378","partyId":"956650570456768354","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956650609879031683","partyId":"956650570456768354","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956650579822649200","partyId":"956650570456768354","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956356025378675086","leadId":"956356025378675086","organisationName":"Hammes, Lind and McGlynn","pan":"AXAMI5627T","salesPersonAccount":null,"addresses":[{"addressId":"956356041849706907","partyId":"956356025378675086","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956356027106728335","partyId":"956356025378675086","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"},{"addressId":"956356033800837529","partyId":"956356025378675086","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null},{"organisationId":"956670528360288818","leadId":"956670528360288818","organisationName":"Hackett and Sons","pan":"YMQLM2450A","salesPersonAccount":{"accountId":"712775975665934269","name":"Ankita Mandle","email":"ankita.mandle@ofbusiness.in","mobile":"9910362799"},"addresses":[{"addressId":"956670531933835837","partyId":"956670528360288818","addressLine1":"test-addressLine1","addressLine2":"test-addressLine2","city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956670570223637074","partyId":"956670528360288818","addressLine1":"addressLine1","addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956670538682470975","partyId":"956670528360288818","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":77.1724,"pinCode":"121001"},{"addressId":"956670570232025683","partyId":"956670528360288818","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":0.0,"longitude":0.0,"pinCode":"121001"},{"addressId":"956670528750359091","partyId":"956670528360288818","addressLine1":null,"addressLine2":null,"city":"Faridabad","state":"Haryana","latitude":28.4873,"longitude":28.4873,"pinCode":"121001"}],"nodeWhitelisted":false,"isOrgVerified":true,"referralCode":null}],"minAccountDto":{"accountId":"759898605539561942","name":"Arjun Schmidt","email":"{{contactpersonemail}}","mobile":"9718415454"},"token":"956778177319935110"},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:15 pm</td>
+        <td>
+          Status code is : 201
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Create Organisation</p>
+            <p class="text-sm">
+              <span>8:08:15 pm</span> / <span>00:00:00:782</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Create Organisation</h5>
+<span class='badge badge-success'>05.12.2023 8:08:15 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:16 pm</span>
+<span class='badge badge-default'>00:00:00:782</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to create new organisation</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:16 pm</td>
+        <td>
+          response {"data":{"organisationId":"956778185205226633","organisationName":"Reinger-Goyette Testing Company","leadId":"956778185205226633","salesAgent":null,"oxyzoSalesAgent":{"accountId":"813501702199058240","name":"Ashish Bhutani","email":"ashish.bhutani@ofbusiness.in","mobile":null},"leadBucket":"LEAD","organisationStatus":"UNVERIFIED","organisationTypes":["BUYER"],"dateCreated":1683902295749,"numberOfApplications":0,"numberOfActiveLoans":0,"numberOfOrders":0,"numberOfRfqs":0,"organisationPan":null,"canClaimLead":false,"canRequestReassignment":false,"isOxyzoSalesAgent":false,"canMarkDistributor":false,"individual":false,"canMarkVendor":false},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:16 pm</td>
+        <td>
+          Status code is : 201
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add Address</p>
+            <p class="text-sm">
+              <span>8:08:16 pm</span> / <span>00:00:00:499</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add Address</h5>
+<span class='badge badge-success'>05.12.2023 8:08:16 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:16 pm</span>
+<span class='badge badge-default'>00:00:00:499</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to add address to organisation</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:16 pm</td>
+        <td>
+          Response : {"data":"Address successfully added to party","success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add GST</p>
+            <p class="text-sm">
+              <span>8:08:16 pm</span> / <span>00:00:00:440</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add GST</h5>
+<span class='badge badge-success'>05.12.2023 8:08:16 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:17 pm</span>
+<span class='badge badge-default'>00:00:00:440</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to add gst in organisation</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:17 pm</td>
+        <td>
+          Response : {"data":{"stateTaxInfoId":"956778190720736405","organisationId":"956778185205226633","stateCode":"HR","stateName":null,"vat":null,"cst":null,"gst":"06VXZTD2235O1ZC","gstIssueDate":1545046231865,"lastFetched":1683902297062},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:17 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">State level info </p>
+            <p class="text-sm">
+              <span>8:08:17 pm</span> / <span>00:00:00:228</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">State level info </h5>
+<span class='badge badge-success'>05.12.2023 8:08:17 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:17 pm</span>
+<span class='badge badge-default'>00:00:00:228</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to fetch stateTaxInfoId</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:17 pm</td>
+        <td>
+          Response : {"data":{"HR":{"stateTaxInfoId":"956778190720736405","organisationId":"956778185205226633","stateCode":"HR","stateName":null,"vat":null,"cst":null,"gst":"06VXZTD2235O1ZC","gstIssueDate":1545046231865,"lastFetched":1683902297062}},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:17 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add Address with GST</p>
+            <p class="text-sm">
+              <span>8:08:17 pm</span> / <span>00:00:00:430</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Add Address with GST</h5>
+<span class='badge badge-success'>05.12.2023 8:08:17 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:17 pm</span>
+<span class='badge badge-default'>00:00:00:430</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to link address with GST</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:17 pm</td>
+        <td>
+          Response : {"data":{"partyId":"956778185205226633","addressTypes":[{"displayName":"Billing Address","name":"BILLING_ADDRESS"},{"displayName":"Shipping Address","name":"SHIPPING_ADDRESS"}],"addressId":"956778193442839702","addressLine1":"Somewhere","addressLine2":"in Faridabad","city":"Faridabad","landmark":null,"pinCode":"121001","state":{"displayName":"Haryana","name":"HARYANA"},"sezAddressGst":"06VXZTD2235O1ZC","linkedContactPersons":[{"employeeId":"6238628696362588160","fullName":"NITIKA","mobileNumber":null,"emails":["test@gmail.com"]}],"linkedGst":"06VXZTD2235O1ZC","meta":null,"verificationStatusMap":{},"isActive":true,"inactiveMarkedOn":null,"inactiveMarkedBy":null},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:17 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">tempUpload</p>
+            <p class="text-sm">
+              <span>8:08:17 pm</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">tempUpload</h5>
+<span class='badge badge-success'>05.12.2023 8:08:17 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:17 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to upload file </div>
+</div>
+</div>          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Address</p>
+            <p class="text-sm">
+              <span>8:08:18 pm</span> / <span>00:00:00:384</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify Address</h5>
+<span class='badge badge-success'>05.12.2023 8:08:18 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:18 pm</span>
+<span class='badge badge-default'>00:00:00:384</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to verify address of organisation</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:18 pm</td>
+        <td>
+          Response : {"data":{"subEntityId":"956778193442839702","lastUpdated":"1683902298781","updatedBy":"956007258171382102","updatedByName":"Automation Bot","status":"VERIFIED"},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:18 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">tempUpload</p>
+            <p class="text-sm">
+              <span>8:08:18 pm</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">tempUpload</h5>
+<span class='badge badge-success'>05.12.2023 8:08:18 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:18 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to upload file </div>
+</div>
+</div>          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify GST</p>
+            <p class="text-sm">
+              <span>8:08:19 pm</span> / <span>00:00:01:489</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify GST</h5>
+<span class='badge badge-success'>05.12.2023 8:08:19 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:21 pm</span>
+<span class='badge badge-default'>00:00:01:489</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to verify GST</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:21 pm</td>
+        <td>
+          Response : {"data":"ok","success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:21 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">tempUpload</p>
+            <p class="text-sm">
+              <span>8:08:21 pm</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">tempUpload</h5>
+<span class='badge badge-success'>05.12.2023 8:08:21 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:21 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to upload file </div>
+</div>
+</div>          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify PAN </p>
+            <p class="text-sm">
+              <span>8:08:21 pm</span> / <span>00:00:00:810</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify PAN </h5>
+<span class='badge badge-success'>05.12.2023 8:08:21 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:22 pm</span>
+<span class='badge badge-default'>00:00:00:810</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to verify PAN associated with organisation</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:22 pm</td>
+        <td>
+          Response : {"data":"ok","success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:22 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Branch Region</p>
+            <p class="text-sm">
+              <span>8:08:22 pm</span> / <span>00:00:00:395</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify Branch Region</h5>
+<span class='badge badge-success'>05.12.2023 8:08:22 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:22 pm</span>
+<span class='badge badge-default'>00:00:00:395</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to verify Branch Region</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:22 pm</td>
+        <td>
+          Response : {"data":"ok","success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:22 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Update Sales Agent</p>
+            <p class="text-sm">
+              <span>8:08:22 pm</span> / <span>00:00:00:323</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Update Sales Agent</h5>
+<span class='badge badge-success'>05.12.2023 8:08:22 pm</span>
+<span class='badge badge-danger'>05.12.2023 8:08:23 pm</span>
+<span class='badge badge-default'>00:00:00:323</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5">API to update sales agent</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>8:08:23 pm</td>
+        <td>
+          Response : {"data":{"leadId":"956778185205226633","salesSupervisors":[{"accountId":"6238589171162681781","name":"Priyanshu Goel","email":"priyanshu.goel@ofbusiness.in","mobile":null}],"others":[{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null}],"leadSources":["ONLINE","OFB_WEB_REGISTERED"],"publishedDate":1683902295749,"callingAgent":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"salesAgent":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"oxyzoSalesAgent":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"crmAssignee":{"accountId":"887084878145787981","name":"Shantanu Singh","email":"shantanu.singh@ofbusiness.in","mobile":null},"collectionAgent":null,"collectionTelecaller":null,"legalAssignee":null,"dateCreated":1683902295749,"createdBy":{"accountId":"6219036125718125526","name":"Anshul Jain","email":"anshul.jain@ofbusiness.in","mobile":null},"utmMedium":null,"utmSource":null},"success":true,"errorMessage":null,"errorCode":null,"meta":null}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:08:23 pm</td>
+        <td>
+          Status code is : 200
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>May 12, 2023 08:08:09 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>May 12, 2023 08:08:23 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>21</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>21</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='48%'><b>17</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>18</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Create Automation and approver account ":1.775,"Create Automation and approver account ":0.243,"Token Auth ":0.242,"GetAdminAuthToken and ApproverAuthToken":0.218,"GetAdminAuthToken and ApproverAuthToken":0.234,"Send Login Otp":0.243,"Get OTP":0.2,"Create New Account ":1.609,"Create Organisation":0.782,"Add Address":0.499,"Add GST":0.44,"State level info ":0.228,"Add Address with GST":0.43,"tempUpload":0,"Verify Address":0.384,"tempUpload":0,"Verify GST":1.489,"tempUpload":0,"Verify PAN ":0.81,"Verify Branch Region":0.395,"Update Sales Agent":0.323
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 21,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 17,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 18
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

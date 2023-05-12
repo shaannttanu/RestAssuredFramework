@@ -59,4 +59,19 @@ public class GetConfigProperties {
         getConfigProperties();
         return prop.getProperty("accountId");
     }
+
+    public static String getHtmlReportPath(){
+        getConfigProperties();
+        return prop.getProperty("htmlFileReportPath");
+    }
+
+    public static String getTempUplaodFilePath(){
+        getConfigProperties();
+        return prop.getProperty("tempUploadFilePath");
+    }
+
+    public static String getGlobalVariableJsonFilePath(){
+        getConfigProperties();
+        return prop.getProperty("globalVariableJsonFilePath");
+    }
 }

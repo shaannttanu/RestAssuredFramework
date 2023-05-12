@@ -1,4 +1,6 @@
 package files;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.github.javafaker.Faker;
 import io.restassured.path.json.JsonPath;
 
@@ -79,5 +81,14 @@ public class UtilityFunctions {
             FileWriter fileWriter = new FileWriter("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\response.txt", false);
             fileWriter.write("");
             fileWriter.close();
+    }
+
+    public static void validateStatusCode (ExtentTest test , int actualStatusCode , int expectedStatusCode){
+
+        if(expectedStatusCode == actualStatusCode){
+            test.log(Status.PASS,"Status code is : "+actualStatusCode);
+        }else{
+            test.log(Status.FAIL,"Status code is : "+expectedStatusCode);
+        }
     }
 }
