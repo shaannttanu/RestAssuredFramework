@@ -26,7 +26,7 @@ public class ReusableAPI {
 
         test = extent.createTest("tempUpload","API to upload file ");
 
-        File testFile  = new File(GetConfigProperties.getTempUplaodFilePath());
+        File testFile  = new File("C:\\Users\\shant\\Desktop\\RestAssuredFramework\\src\\test\\java\\Resources\\download.jpg");
         Response response = RestAssured
                 .given()
                     .baseUri(GetConfigProperties.getStgfs())
